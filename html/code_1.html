@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor: AI駆動型開発の最前線</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&family=Noto+Sans+JP:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind CSS Custom Configuration & Custom CSS -->
+    <style type="text/tailwindcss">
+        @layer base {
+            html {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+        @layer utilities {
+            .animation-delay-200 {
+                animation-delay: 200ms;
+            }
+            .animation-delay-400 {
+                animation-delay: 400ms;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    animation: {
+                        'subtle-float': 'subtle-float 6s ease-in-out infinite',
+                        'subtle-pulse': 'subtle-pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        'subtle-float': {
+                            '0%, 100%': { transform: 'translateY(-10px)' },
+                            '50%': { transform: 'translateY(10px)' },
+                        },
+                        'subtle-pulse': {
+                            '0%, 100%': { opacity: 0.5 },
+                            '50%': { opacity: 1 },
+                        },
+                        'fade-in-up': {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(20px)',
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)',
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* For elements that appear on scroll */
+        .fade-in-up-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 font-sans text-slate-300 overflow-x-hidden">
+
+    <main id="top">
+
+        <!-- Background Shapes -->
+        <div class="absolute top-0 left-0 w-72 h-72 lg:w-96 lg:h-96 bg-blue-500/20 rounded-full blur-3xl -z-10 animation-subtle-float"></div>
+        <div class="absolute bottom-0 right-0 w-72 h-72 lg:w-96 lg:h-96 bg-violet-500/20 rounded-full blur-3xl -z-10 animation-subtle-float animation-delay-400"></div>
+
+        <article class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Hero Section -->
+            <section class="relative min-h-screen flex flex-col items-center justify-center text-center py-20 overflow-hidden">
+                <div class="absolute inset-0 -z-20">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1920&auto=format&fit=crop" 
+                         alt="近未来的なサーバーラックの青い光が照らすデータセンターの内部" 
+                         class="w-full h-full object-cover opacity-20">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent"></div>
+                </div>
+
+                <div class="relative z-10 animate-fade-in-up">
+                    <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-4">
+                        <span class="bg-gradient-to-r from-sky-400 to-violet-500 bg-clip-text text-transparent">Cursor</span>
+                    </h1>
+                    <h2 class="font-heading text-2xl md:text-4xl font-semibold text-slate-100 max-w-4xl mx-auto mb-6">
+                        AI駆動型開発の最前線：Cursorの最新進化がもたらすコード革命
+                    </h2>
+                    <p class="max-w-2xl mx-auto text-lg text-slate-400 mb-12">
+                        2025年、ソフトウェア開発の世界はAIの進化により目覚ましい変革を遂げています。中でも、AIを主軸に設計されたコードエディタ「Cursor」は、その最新機能で開発者のワークフローを劇的に変化させ、私たちのコーディング体験を再定義しようとしています。
+                    </p>
+                    <a href="#features" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/30">
+                        その進化を見る <i class="fas fa-arrow-down ml-2"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="py-20 lg:py-32">
+                <div class="text-center mb-16 fade-in-up-on-scroll">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-100">Cursor 1.0の登場とAI機能の飛躍的進化</h2>
+                    <p class="mt-4 text-lg text-slate-400 max-w-3xl mx-auto">このメジャーアップデートでは、開発者の生産性を最大化するための革新的なAI機能が多数導入されました。</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 fade-in-up-on-scroll">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500/20 text-blue-400 mb-4">
+                            <i class="fas fa-robot text-xl"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-slate-100 mb-2">BugBotによる自動レビュー</h3>
+                        <p class="text-slate-400">GitHubのプルリクエストを自動レビューし、潜在的なバグを早期発見。コードレビューの効率を劇的に向上させます。</p>
+                    </div>
+                    <!-- Feature Card 2 -->
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 fade-in-up-on-scroll animation-delay-200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500/20 text-blue-400 mb-4">
+                            <i class="fas fa-people-arrows text-xl"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-slate-100 mb-2">バックグラウンドエージェント</h3>
+                        <p class="text-slate-400">AIエージェントがリモート環境で大規模タスクを並行実行。開発者はより複雑な問題解決に集中できます。</p>
+                    </div>
+                    <!-- Feature Card 3 -->
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 fade-in-up-on-scroll animation-delay-400">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-500/20 text-blue-400 mb-4">
+                            <i class="fas fa-brain text-xl"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-slate-100 mb-2">「Memories」機能</h3>
+                        <p class="text-slate-400">過去のチャットを記憶・参照し、ユーザーの好みやプロジェクトの文脈を学習。よりパーソナライズされたサポートを提供。</p>
+                    </div>
+                    <!-- Feature Card 4 -->
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/20 hover:-translate-y-2 fade-in-up-on-scroll">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-violet-500/20 text-violet-400 mb-4">
+                            <i class="fas fa-puzzle-piece text-xl"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-slate-100 mb-2">ワンクリックMCPインストール</h3>
+                        <p class="text-slate-400">GitHub, Figma, Notion等との連携をワンクリックで実現。AIが様々なツールと直接対話可能に。</p>
+                    </div>
+                    <!-- Feature Card 5 -->
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/20 hover:-translate-y-2 fade-in-up-on-scroll animation-delay-200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-violet-500/20 text-violet-400 mb-4">
+                            <i class="fas fa-book-open text-xl"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-slate-100 mb-2">Jupyter Notebooks連携</h3>
+                        <p class="text-slate-400">Jupyter Notebook内でAIエージェントが直接コードを実装。データサイエンスの生産性が向上します。</p>
+                    </div>
+                    <!-- Feature Card 6 -->
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/20 hover:-translate-y-2 fade-in-up-on-scroll animation-delay-400">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-violet-500/20 text-violet-400 mb-4">
+                            <i class="fas fa-cogs text-xl"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold text-slate-100 mb-2">最新AIモデル統合</h3>
+                        <p class="text-slate-400">OpenAIのo3やo4-mini、GPT-4.1など常に最新・最強のモデルへアクセス可能。最高のパフォーマンスを実現します。</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Related Products Section 1 -->
+            <section class="py-20 lg:py-24">
+                <div class="text-center mb-12 fade-in-up-on-scroll">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-100">関連ツール & エコシステム</h2>
+                    <p class="mt-4 text-lg text-slate-400 max-w-3xl mx-auto">Cursorはこれらのモダンな開発ツールとシームレスに連携します。</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1 -->
+                    <a href="#dummy" class="group block bg-slate-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2 fade-in-up-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=600&auto=format&fit=crop" alt="Reactのロゴが画面に表示されている" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-slate-100">React.js ライブラリ</h4>
+                            <p class="text-sm text-slate-400 mt-1">コンポーネントベースUI開発</p>
+                        </div>
+                    </a>
+                    <!-- Product Card 2 -->
+                    <a href="#dummy" class="group block bg-slate-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2 fade-in-up-on-scroll animation-delay-200">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" alt="データ分析ダッシュボードのスクリーンショット" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-slate-100">DataViz Pro</h4>
+                            <p class="text-sm text-slate-400 mt-1">インタラクティブデータ可視化</p>
+                        </div>
+                    </a>
+                    <!-- Product Card 3 -->
+                    <a href="#dummy" class="group block bg-slate-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2 fade-in-up-on-scroll animation-delay-400">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop" alt="ラップトップ、タブレット、スマートフォンが並んでいる" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-slate-100">DeployMaster</h4>
+                            <p class="text-sm text-slate-400 mt-1">マルチプラットフォームCI/CD</p>
+                        </div>
+                    </a>
+                    <!-- Product Card 4 -->
+                    <a href="#dummy" class="group block bg-slate-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2 fade-in-up-on-scroll" style="animation-delay: 600ms;">
+                        <img src="https://images.unsplash.com/photo-1520288599413-738981affc43?q=80&w=600&auto=format&fit=crop" alt="緑色に光るマイクロチップの回路基板のクローズアップ" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-slate-100">Quantum Core</h4>
+                            <p class="text-sm text-slate-400 mt-1">次世代コンピューティングAPI</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Workflow Section -->
+            <section class="py-20 lg:py-32 overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="relative h-96 lg:h-auto lg:min-h-[500px] fade-in-up-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1592609931095-54a2168ae893?q=80&w=1200&auto=format&fit=crop" alt="VS CodeのようなエディタにJavaScriptコードが表示されているモニターのクローズアップ" class="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-2xl">
+                    </div>
+                    <div class="fade-in-up-on-scroll animation-delay-200">
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-100 mb-6">
+                            <span class="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">AIが拓く、</span>
+                            次世代の開発ワークフロー
+                        </h2>
+                        <div class="space-y-6 text-lg text-slate-300">
+                            <p>従来のコードエディタの限界を超え、Cursorの最新AI機能はあなたのコーディング体験を根本から変革します。BugBotによる自動レビュー、バックグラウンドエージェントによる大規模タスク実行、そして「Memories」機能によるパーソナルな学習支援。</p>
+                            <p>これら全てがシームレスに連携し、まるで思考の延長のようにコードが書ける。あなたは一人ではなく、常に最適なAIパートナーと共に開発を進める感覚を味わえるでしょう。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparison Section -->
+            <section class="py-20 lg:py-32">
+                <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 lg:p-12 fade-in-up-on-scroll">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                        <div class="lg:col-span-1">
+                            <h2 class="font-heading text-3xl font-bold text-slate-100">Cursor vs. Copilot</h2>
+                            <p class="mt-4 text-slate-400">両者は異なる哲学を持っています。CursorはAIを中核とした統合開発環境を目指します。</p>
+                        </div>
+                        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="bg-slate-900/50 p-6 rounded-lg border border-slate-600">
+                                <h3 class="font-heading text-xl font-semibold text-white mb-3">GitHub Copilot</h3>
+                                <ul class="space-y-2 text-slate-300">
+                                    <li class="flex items-start"><i class="fas fa-check text-green-400 mt-1 mr-3"></i> 既存IDEへの統合</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-green-400 mt-1 mr-3"></i> 強力なコード補完</li>
+                                    <li class="flex items-start"><i class="fas fa-check text-green-400 mt-1 mr-3"></i> AIチャット機能</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-900/50 p-6 rounded-lg border-2 border-blue-500 shadow-lg shadow-blue-500/20">
+                                <h3 class="font-heading text-xl font-semibold text-white mb-3 flex items-center">
+                                    <span class="bg-gradient-to-r from-sky-400 to-violet-500 bg-clip-text text-transparent">Cursor</span>
+                                    <span class="ml-2 text-xs bg-blue-500 text-white font-bold py-1 px-2 rounded-full">Advantage</span>
+                                </h3>
+                                <ul class="space-y-2 text-slate-300">
+                                    <li class="flex items-start"><i class="fas fa-star text-blue-400 mt-1 mr-3"></i> AIネイティブな開発環境</li>
+                                    <li class="flex items-start"><i class="fas fa-star text-blue-400 mt-1 mr-3"></i> コードベース全体のコンテキスト理解</li>
+                                    <li class="flex items-start"><i class="fas fa-star text-blue-400 mt-1 mr-3"></i> 自律的なAIエージェント機能</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Creativity Section -->
+            <section class="py-20 lg:py-32 overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in-up-on-scroll">
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-100 mb-6">
+                            開発者の
+                            <span class="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">真の創造性</span>
+                            を解き放つ
+                        </h2>
+                        <div class="space-y-6 text-lg text-slate-300">
+                             <p>定型作業や見落としがちなバグはAIに任せ、あなたは「創造的な問題解決」や「革新的なアイデアの実現」に集中できます。コード品質の向上、レビューサイクルの短縮、そして何よりも開発の楽しさを再発見。</p>
+                             <p>Cursorの最新AI機能がもたらすのは、生産性の劇的な向上と、開発者の未来を拓く新たな可能性です。</p>
+                        </div>
+                    </div>
+                    <div class="relative h-96 lg:h-auto lg:min-h-[500px] fade-in-up-on-scroll animation-delay-200">
+                        <div class="absolute inset-0 w-full h-full bg-slate-800/30 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg p-8 -z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1200&auto=format&fit=crop" alt="VRゴーグルを装着した男性が驚いた表情で未来的なインターフェースを見ている" class="absolute inset-x-0 top-0 w-full h-full object-cover rounded-2xl shadow-2xl scale-110 -rotate-3 transition-transform duration-500 hover:scale-100 hover:rotate-0">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Related Products Section 2 -->
+            <section class="py-20 lg:py-24">
+                <div class="text-center mb-12 fade-in-up-on-scroll">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-100">インスピレーションを与えるリソース</h2>
+                    <p class="mt-4 text-lg text-slate-400 max-w-3xl mx-auto">あなたの次のプロジェクトを加速させるためのヒントとアイデア。</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 5 -->
+                    <a href="#dummy" class="group block bg-slate-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20 hover:-translate-y-2 fade-in-up-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1694312521197-22a4501a403c?q=80&w=600&auto=format&fit=crop" alt="紫と青の抽象的な3Dクリスタル構造" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-slate-100">ジェネレーティブアート入門</h4>
+                            <p class="text-sm text-slate-400 mt-1">AIで創造するビジュアル表現</p>
+                        </div>
+                    </a>
+                    <!-- Product Card 6 -->
+                    <a href="#dummy" class="group block bg-slate-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20 hover:-translate-y-2 fade-in-up-on-scroll animation-delay-200">
+                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=600&auto=format&fit=crop" alt="Pythonコードが表示されたラップトップとノート" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-slate-100">Python高速化テクニック</h4>
+                            <p class="text-sm text-slate-400 mt-1">パフォーマンスチューニングガイド</p>
+                        </div>
+                    </a>
+                    <!-- Product Card 7 -->
+                    <a href="#dummy" class="group block bg-slate-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20 hover:-translate-y-2 fade-in-up-on-scroll animation-delay-400">
+                        <img src="https://images.unsplash.com/photo-1678122352136-a6167823524b?q=80&w=600&auto=format&fit=crop" alt="暗闇に広がる抽象的な青い光の線" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-slate-100">セキュアコーディング原則</h4>
+                            <p class="text-sm text-slate-400 mt-1">AI時代のセキュリティ課題</p>
+                        </div>
+                    </a>
+                    <!-- Product Card 8 -->
+                    <a href="#dummy" class="group block bg-slate-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/20 hover:-translate-y-2 fade-in-up-on-scroll" style="animation-delay: 600ms;">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop" alt="ラップトップ、タブレット、スマートフォンが並んでいる" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-slate-100">UXデザインの未来</h4>
+                            <p class="text-sm text-slate-400 mt-1">AIが変えるユーザー体験</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Conclusion & CTA Section -->
+            <section class="py-20 lg:py-32">
+                <div class="text-center max-w-3xl mx-auto fade-in-up-on-scroll">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-100">まとめ：開発者の「思考速度」でのコーディングへ</h2>
+                    <p class="mt-6 text-lg text-slate-400">
+                        Cursorの最新シリーズは、単なるコード補完ツールを超え、開発者の思考速度でコーディングを可能にする「AIペアプログラマー」としての地位を確立しつつあります。
+                    </p>
+                    <p class="mt-4 text-slate-400">
+                        もちろん、強力なAIエージェント機能には新たなセキュリティ上の課題も伴います。しかし、これらの課題を克服し、AIが開発者の真のパートナーとなる未来に向けて、Cursorは間違いなくその最前線を走り続けています。
+                    </p>
+                    <div class="mt-12">
+                        <h3 class="font-heading text-xl font-semibold text-white">さあ、未来の開発体験を始めましょう。</h3>
+                        <p class="mt-2 text-slate-400 mb-6">今すぐCursorをダウンロードし、AIと共にコードの新たな地平を切り開いてください。</p>
+                        <a href="https://cursor.sh/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-blue-500 to-violet-600 text-white font-bold py-4 px-10 rounded-lg text-xl hover:from-blue-600 hover:to-violet-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-violet-500/30">
+                            Cursorを無料で試す <i class="fas fa-rocket ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <footer class="text-center py-8 border-t border-slate-800">
+                <p class="text-slate-500">
+                    <a href="#top" class="hover:text-slate-300 transition-colors">ページトップへ戻る <i class="fas fa-arrow-up ml-1"></i></a>
+                </p>
+            </footer>
+
+        </article>
+    </main>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll-triggered fade-in animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: unobserve after animation
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            rootMargin: '0px',
+            threshold: 0.1
+        });
+
+        const elementsToAnimate = document.querySelectorAll('.fade-in-up-on-scroll');
+        elementsToAnimate.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

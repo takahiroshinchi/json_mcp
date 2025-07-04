@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>機動戦士Gundam GQuuuuuuX - 新時代の輝き</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind CSS Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                        display: ['Poppins', 'Noto Sans JP', 'sans-serif'],
+                        jp: ['Noto Sans JP', 'sans-serif'],
+                    },
+                    animation: {
+                        'clean-float': 'float 6s ease-in-out infinite',
+                        'clean-pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'subtle-shimmer': 'shimmer 5s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(-5%)' },
+                            '50%': { transform: 'translateY(5%)' },
+                        },
+                        shimmer: {
+                            '0%, 100%': { opacity: '0.8' },
+                            '50%': { opacity: '1' },
+                        },
+                        fadeInUp: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(20px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            },
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                        'tech-pattern': "url('https://picsum.photos/seed/digital%20shimmering%20light/1200/800')"
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-gradient {
+            background-image: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .section-fade-in {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300 font-sans leading-relaxed selection:bg-violet-500/30">
+
+    <main class="relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 -left-1/4 w-1/2 h-1/2 bg-blue-500/20 rounded-full blur-3xl animate-clean-float opacity-30"></div>
+        <div class="absolute bottom-0 -right-1/4 w-1/2 h-1/2 bg-violet-500/20 rounded-full blur-3xl animate-clean-float animation-delay-3000 opacity-30"></div>
+
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center p-8 bg-hero-pattern bg-cover bg-center bg-no-repeat">
+            <div class="absolute inset-0 bg-slate-900/70 backdrop-blur-sm"></div>
+            <div class="relative z-10 text-center max-w-4xl mx-auto animate-fade-in-up">
+                <h1 class="font-display font-black text-5xl md:text-7xl lg:text-8xl tracking-tighter mb-4 text-white">
+                    ガンダム<span class="text-gradient"> GQuuuuuuX</span>
+                </h1>
+                <h2 class="font-jp font-bold text-lg md:text-2xl text-slate-200 mb-8">
+                    ガンダム最新シリーズ『機動戦士Gundam GQuuuuuuX』が描く、新時代のスタイリッシュな輝き！
+                </h2>
+                <p class="max-w-2xl mx-auto text-slate-300 mb-10">
+                    伝統を受け継ぎつつ、新たな視聴者層にも響く現代的な魅力とスタイリッシュなデザインを兼ね備えた、まさに「最新」のガンダム体験がここに。この新時代の輝きを、その目で確かめてください。
+                </p>
+                <a href="#introduction" class="inline-block bg-gradient-to-r from-blue-500 to-violet-500 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    その進化を目撃する <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="py-20 md:py-32 px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 text-white">
+                    <span class="text-gradient">ガンダムの常識</span>を、塗り替える。
+                </h2>
+                <p class="text-lg text-slate-400">
+                    2025年7月現在、ガンダムシリーズの最新TVシリーズとして注目を集めているのが、『機動戦士Gundam GQuuuuuuX（ジークアクス）』です。2025年4月9日よりPrime Videoで国内最速配信が開始され、日本テレビ系30局ネットでも放送中。本作は、これまでのガンダムシリーズへのオマージュが散りばめられ往年のファンを掴む一方、初めてガンダムを観る人にも親しみやすいストーリーラインが特徴。その進化は、デザイン、物語、そして映像体験の全てに及んでいます。
+                </p>
+            </div>
+        </section>
+
+        <!-- Related Items Section 1 -->
+        <section class="py-12 px-8">
+            <div class="max-w-6xl mx-auto">
+                <h3 class="font-display text-2xl font-bold text-center mb-10 text-white">関連アイテム & 最新ガンプラ</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Item 1 -->
+                    <a href="#dummy" class="group block bg-slate-800/50 border border-slate-700 rounded-lg shadow-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 overflow-hidden">
+                        <img src="https://picsum.photos/seed/futuristic%20robot/800/600" alt="スタイリッシュなデザインの最新ガンプラモデル" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-white mb-2">MG 1/100 GQuuuuuuX</h4>
+                            <p class="text-slate-400 text-sm">次世代の可動域とディテールを再現。</p>
+                        </div>
+                    </a>
+                    <!-- Item 2 -->
+                    <a href="#dummy" class="group block bg-slate-800/50 border border-slate-700 rounded-lg shadow-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 overflow-hidden">
+                        <img src="https://picsum.photos/seed/sleek%20modern%20design/800/600" alt="敵役のシャープなデザインのモビルスーツ" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-white mb-2">HG 1/144 Rival Unit "Void"</h4>
+                            <p class="text-slate-400 text-sm">漆黒の機体、謎に包まれたライバル機。</p>
+                        </div>
+                    </a>
+                    <!-- Item 3 -->
+                    <a href="#dummy" class="group block bg-slate-800/50 border border-slate-700 rounded-lg shadow-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 overflow-hidden">
+                        <img src="https://unsplash.it/800/600?image=1073" alt="GQuuuuuuXのロゴが入った公式アパレル" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-white mb-2">GQuuuuuuX Official T-Shirt</h4>
+                            <p class="text-slate-400 text-sm">シリーズの世界観を身にまとう。</p>
+                        </div>
+                    </a>
+                    <!-- Item 4 -->
+                    <a href="#dummy" class="group block bg-slate-800/50 border border-slate-700 rounded-lg shadow-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2 overflow-hidden">
+                        <img src="https://unsplash.it/800/600?image=1062" alt="シリーズのサウンドトラックCDのジャケット" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-white mb-2">Original Soundtrack Vol.1</h4>
+                            <p class="text-slate-400 text-sm">新時代の戦場を彩る珠玉の楽曲集。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 1: Style -->
+        <section id="feature-style" class="py-20 md:py-32 px-8 overflow-hidden">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://picsum.photos/seed/stylish%20technology/800/600" alt="未来的な都市景観とスタイリッシュな戦闘シーン" class="rounded-xl shadow-2xl shadow-violet-500/10 w-full">
+                </div>
+                <div class="lg:pl-8">
+                    <span class="font-display font-bold text-gradient">A New Era of Style</span>
+                    <h3 class="font-jp font-black text-3xl md:text-4xl mt-2 mb-6 text-white">研ぎ澄まされた、スタイリッシュな世界観</h3>
+                    <p class="text-slate-400 mb-4">
+                        『GQuuuuuuX』は、単に機体のデザインがスタイリッシュなだけではありません。登場人物たちのファッション、都市の景観、そして戦闘シーンの動きの一つ一つに至るまで、洗練された美意識が貫かれています。
+                    </p>
+                    <p class="text-slate-400">
+                        これまでのガンダムシリーズの重厚な世界観に、現代的なシャープさと軽やかさが加わり、見る者を瞬時にその新時代の扉へと誘います。かつてのファンには懐かしさを、新たな視聴者には新鮮な驚きを提供する、まさに進化の結晶です。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 2: Story -->
+        <section id="feature-story" class="py-20 md:py-32 px-8 overflow-hidden bg-slate-900/50">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="lg:pr-8 order-2 lg:order-1">
+                    <span class="font-display font-bold text-gradient">A Story for All Generations</span>
+                    <h3 class="font-jp font-black text-3xl md:text-4xl mt-2 mb-6 text-white">世代を超えて響く「最新」の物語</h3>
+                    <p class="text-slate-400 mb-4">
+                        なぜ今、これほどまでに『GQuuuuuuX』が熱狂的に支持されるのか？それは、最新の技術とスタイリッシュな表現の中に、ガンダムが長年培ってきた「人間ドラマ」という本質が息づいているからです。
+                    </p>
+                    <p class="text-slate-400">
+                        複雑な人間関係、揺れ動く感情、そして未来への希望と葛藤が、スタイリッシュな映像と融合し、観る者の心に深く訴えかけます。初めてガンダムに触れる人も、長年のファンも、それぞれの視点から深く感情移入できる普遍的な魅力がここにあります。
+                    </p>
+                </div>
+                <div class="relative order-1 lg:order-2">
+                    <img src="https://picsum.photos/seed/sci-fi%20innovation/800/600" alt="キャラクターたちが葛藤し成長するドラマティックなシーン" class="rounded-xl shadow-2xl shadow-blue-500/10 w-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Section 3: Technology -->
+        <section id="feature-tech" class="relative py-20 md:py-32 px-8 bg-tech-pattern bg-cover bg-center">
+            <div class="absolute inset-0 bg-slate-900/80"></div>
+            <div class="relative z-10 max-w-4xl mx-auto text-center">
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 md:p-12 shadow-2xl">
+                    <span class="font-display font-bold text-gradient">Technological Marvel</span>
+                    <h3 class="font-jp font-black text-3xl md:text-4xl mt-2 mb-6 text-white">映像表現の、新たな地平へ</h3>
+                    <p class="text-slate-300 mb-6">
+                        『GQuuuuuuX』の魅力を支えるのは、最先端の映像技術です。さらに、Netflixシリーズとして制作中の『機動戦士ガンダム 復讐のレクイエム』では、Unreal Engine 5を駆使したフォトリアルな映像表現に挑戦。ガンダムの進化は、ストーリーだけでなく、それを描くテクノロジーと共に加速し続けています。
+                    </p>
+                    <div class="inline-flex items-center justify-center bg-slate-800 px-4 py-2 rounded-full">
+                        <span class="text-white font-bold">Powered by Unreal Engine 5</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="py-20 md:py-32 px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="font-display font-bold text-4xl md:text-5xl mb-6 text-white">
+                    今すぐ、<span class="text-gradient">新時代の輝き</span>を体感しよう
+                </h2>
+                <p class="text-slate-400 text-lg mb-10">
+                    テレビの前で、あるいは手元のデバイスで、最新のガンダムが放つ光を浴びる準備はできていますか？『機動戦士Gundam GQuuuuuuX』は、あなたのガンダム観を根底から覆す、まさに必見のシリーズです。この新時代の幕開けを、ぜひリアルタイムで体験してください。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#dummy" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-blue-500 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+                        <i class="fab fa-amazon mr-3"></i> Prime Videoで観る
+                    </a>
+                    <a href="#dummy" class="bg-slate-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-slate-600 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-tv mr-3"></i> 公式サイトへ
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Simple scroll-based fade-in animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    entry.target.style.opacity = 1; // Make visible
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        // Observe all sections
+        document.querySelectorAll('section > div').forEach(sectionDiv => {
+             // Add initial hidden state for animation
+            if (!sectionDiv.classList.contains('z-10')) { // Don't hide hero text initially
+                sectionDiv.style.opacity = 0;
+            }
+            observer.observe(sectionDiv);
+        });
+    </script>
+</body>
+</html>

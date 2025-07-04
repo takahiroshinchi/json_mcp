@@ -1,0 +1,338 @@
+Generated html
+
+```html
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Git解決策】rejected: main -> main (non-fast-forward) エラーの原因と対処法</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&family=Noto+Sans+JP:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    animation: {
+                        'clean-float': 'clean-float 8s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'clean-float': {
+                            '0%, 100%': { transform: 'translateY(-15px) translateX(10px) rotate(5deg)' },
+                            '50%': { transform: 'translateY(15px) translateX(-10px) rotate(-5deg)' },
+                        },
+                    },
+                    boxShadow: {
+                        'inset-blue': 'inset 0 2px 4px 0 rgba(59, 130, 246, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .commit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .arrow {
+            position: relative;
+            width: 5rem;
+            height: 2px;
+            background-color: currentColor;
+            margin: 0 0.5rem;
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            right: -1px;
+            top: 50%;
+            width: 0.6rem;
+            height: 0.6rem;
+            border-top: 2px solid currentColor;
+            border-right: 2px solid currentColor;
+            transform: translateY(-50%) rotate(45deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-700 antialiased">
+
+    <main class="relative overflow-hidden">
+        <div class="absolute top-20 -left-40 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-clean-float"></div>
+        <div class="absolute bottom-0 -right-40 w-96 h-96 bg-violet-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-clean-float" style="animation-delay: -4s;"></div>
+
+        <section class="relative py-20 lg:py-32">
+            <div class="container mx-auto px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <span class="text-sm font-bold tracking-wider uppercase text-blue-600">Git トラブルシューティング</span>
+                    <h1 class="font-display text-4xl md:text-5xl font-bold text-slate-900 mt-2 mb-6">
+                        "non-fast-forward"エラーの解決策：<br class="hidden md:block" /><span class="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">git pullとrebaseの使い分け</span>
+                    </h1>
+                    <p class="text-lg text-slate-600">
+                        `git push`で突然現れる`[rejected]`エラー。その原因と、履歴を壊さずに安全に解決する方法を図解で徹底解説します。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-6 lg:px-8">
+            <section class="max-w-4xl mx-auto my-12 lg:my-16">
+                <h2 class="font-display text-2xl font-bold text-slate-800 mb-4">こんなエラーに遭遇していませんか？</h2>
+                <p class="text-slate-600 mb-6">
+                    ローカルで順調に作業を進め、いざ`git push`を実行した瞬間、ターミナルに赤い文字で表示される見慣れないエラー。開発者なら誰しもが一度は経験するであろう、この状況からこの記事は始まります。
+                </p>
+                <pre class="bg-slate-900 text-white font-mono text-sm p-4 rounded-lg shadow-lg overflow-x-auto"><code><span class="text-gray-400">$</span> git push origin main
+Enter passphrase for key '/Users/takahiro.shinchi/.ssh/id_rsa_ts82':
+To github.com:takahiroshinchi/json_mcp.git
+<span class="text-red-400"> ! [rejected]        main -> main (non-fast-forward)</span>
+<span class="text-red-400">error:</span> failed to push some refs to 'github.com:takahiroshinchi/json_mcp.git'
+<span class="text-yellow-400">hint:</span> Updates were rejected because the tip of your current branch is behind
+<span class="text-yellow-400">hint:</span> its remote counterpart. Integrate the remote changes (e.g.
+<span class="text-yellow-400">hint:</span> 'git pull ...') before pushing again.
+<span class="text-yellow-400">hint:</span> See the 'Note about fast-forwards' in 'git push --help' for details.</code></pre>
+                <p class="mt-6 text-slate-600">
+                    この <strong class="text-slate-800">`non-fast-forward`</strong> エラーは、Gitがリモートリポジトリの履歴を保護するために発生させるものです。決して怖いものではなく、Gitの安全機能が正しく作動している証拠です。原因を理解すれば、簡単かつ安全に対処できます。
+                </p>
+            </section>
+
+            <section class="my-16 lg:my-24">
+                <header class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-900">
+                        なぜエラーが起きるのか？<span class="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">図で見る原因</span>
+                    </h2>
+                    <p class="mt-4 text-slate-600">
+                        エラーの核心は「ローカルとリモートの歴史のズレ」。あなたが知らない間に、リモートブランチの歴史が進んでしまった状態です。
+                    </p>
+                </header>
+                
+                <div class="bg-white border border-slate-200 rounded-lg shadow-md p-6 md:p-8">
+                    <p class="mb-6 text-center">チーム開発中、あなたがローカルでコミット（C3）を作成している間に、別の誰かがリモートの`main`ブランチに新しいコミット（C2）をプッシュしたとします。</p>
+                    <div class="flex flex-col items-center justify-center space-y-8">
+                        <div class="w-full max-w-2xl">
+                            <h3 class="font-bold text-slate-600 mb-2 text-center">エラー発生時のリポジトリ状態</h3>
+                            <div class="mb-4">
+                                <p class="font-mono text-sm text-center mb-2">Remote (origin/main)</p>
+                                <div class="flex items-center justify-center text-violet-600">
+                                    <div class="commit bg-violet-100 border-2 border-violet-500">C1</div>
+                                    <div class="arrow"></div>
+                                    <div class="commit bg-violet-100 border-2 border-violet-500">C2</div>
+                                </div>
+                            </div>
+                             <div>
+                                <p class="font-mono text-sm text-center mb-2">Local (main)</p>
+                                 <div class="flex items-center justify-center text-blue-600">
+                                    <div class="commit bg-blue-100 border-2 border-blue-500">C1</div>
+                                    <div class="arrow"></div>
+                                    <div class="commit bg-blue-100 border-2 border-blue-500">C3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center text-slate-600 max-w-xl">
+                            あなたのローカルリポジトリは `C2` の存在を知りません。この状態でプッシュしようとすると、リモートの `C2` というコミットが歴史から消えてしまう可能性があります。それを防ぐため、Gitはプッシュを拒否（reject）するのです。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+             <section class="my-16 lg:my-24">
+                 <h3 class="font-display text-2xl font-bold text-slate-800 text-center mb-8">Gitスキルをさらに高める</h3>
+                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                     <a href="#dummy" class="group relative block overflow-hidden rounded-lg shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
+                         <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=2088&auto=format&fit=crop" alt="Gitのブランチ戦略の概念図" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                         <div class="absolute bottom-0 left-0 p-4">
+                             <h4 class="font-display text-lg font-bold text-white">Gitブランチ戦略ガイド</h4>
+                             <p class="text-sm text-slate-200">チーム開発を効率化する</p>
+                         </div>
+                     </a>
+                     <a href="#dummy" class="group relative block overflow-hidden rounded-lg shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
+                         <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop" alt="コードレビューをしている開発者たち" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                         <div class="absolute bottom-0 left-0 p-4">
+                             <h4 class="font-display text-lg font-bold text-white">コンフリクト解決マスター</h4>
+                             <p class="text-sm text-slate-200">落ち着いて対処する技術</p>
+                         </div>
+                     </a>
+                     <a href="#dummy" class="group relative block overflow-hidden rounded-lg shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
+                         <img src="https://images.unsplash.com/photo-1621213753232-520230563454?q=80&w=1932&auto=format&fit=crop" alt="GitHub Actionsのロゴ" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                         <div class="absolute bottom-0 left-0 p-4">
+                             <h4 class="font-display text-lg font-bold text-white">GitHub Actions入門</h4>
+                             <p class="text-sm text-slate-200">CI/CDで開発を自動化</p>
+                         </div>
+                     </a>
+                     <a href="#dummy" class="group relative block overflow-hidden rounded-lg shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
+                         <img src="https://images.unsplash.com/photo-1599658880122-6b3a3fb41423?q=80&w=2070&auto=format&fit=crop" alt="ターミナルに表示されたコード" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                         <div class="absolute bottom-0 left-0 p-4">
+                             <h4 class="font-display text-lg font-bold text-white">CLIツール活用術</h4>
+                             <p class="text-sm text-slate-200">生産性を上げるコマンド</p>
+                         </div>
+                     </a>
+                 </div>
+            </section>
+
+            <section class="my-16 lg:my-24">
+                <header class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-900">
+                        2つの安全な解決策：<span class="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">Merge vs. Rebase</span>
+                    </h2>
+                    <p class="mt-4 text-slate-600">
+                        解決策は、リモートの変更（C2）をローカルに取り込むこと。その方法には大きく分けて2つのアプローチがあります。
+                    </p>
+                </header>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white border border-slate-200 rounded-lg shadow-md p-6 md:p-8 transition-all hover:shadow-xl hover:-translate-y-1">
+                        <h3 class="font-display text-2xl font-semibold text-slate-800 mb-3">解決策1: Mergeで統合する (`git pull`)</h3>
+                        <p class="text-slate-600 mb-4">最も一般的で安全な方法です。リモートの変更とローカルの変更を統合するための新しい「マージコミット(C4)」を作成します。</p>
+                        <pre class="bg-slate-800 text-white font-mono text-sm p-3 rounded-lg mb-4"><code>git pull origin main</code></pre>
+                        <div class="text-xs text-slate-500 mb-4">(内部的には `git fetch` + `git merge` を実行)</div>
+                        <div class="w-full text-center">
+                           <h4 class="font-bold text-slate-600 mb-2">Pull (Merge) 後の履歴</h4>
+                           <div class="flex items-center justify-center text-gray-500 relative mt-12">
+                               <div class="commit bg-slate-200 border-2 border-slate-400">C1</div>
+                               <div class="arrow"></div>
+                               <div class="commit bg-violet-100 border-2 border-violet-500">C2</div>
+                               <div class="arrow"></div>
+                               <div class="commit bg-green-100 border-2 border-green-500">C4</div>
+                               <div class="absolute -bottom-8 left-1/2 -translate-x-1/4">
+                                  <div class="commit bg-blue-100 border-2 border-blue-500">C3</div>
+                                   <div class="absolute bottom-full left-1/2 w-0.5 h-4 bg-gray-500"></div>
+                                   <div class="absolute bottom-10 left-1/2 w-0.5 h-6 bg-gray-500 transform -rotate-45 origin-bottom-left"></div>
+                               </div>
+                           </div>
+                        </div>
+                        <p class="mt-16 text-slate-600"><strong>利点:</strong> 変更履歴を正直に記録します。「ここで分岐して、ここで統合した」という事実がそのまま残ります。</p>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-lg shadow-md p-6 md:p-8 transition-all hover:shadow-xl hover:-translate-y-1">
+                        <h3 class="font-display text-2xl font-semibold text-slate-800 mb-3">解決策2: Rebaseで歴史を整える (`pull --rebase`)</h3>
+                        <p class="text-slate-600 mb-4">ローカルの変更（C3）を、リモートの最新の変更（C2）の「後」に移動させ、歴史を一直線に並べ替えます。</p>
+                        <pre class="bg-slate-800 text-white font-mono text-sm p-3 rounded-lg mb-4"><code>git pull --rebase origin main</code></pre>
+                        <div class="text-xs text-slate-500 mb-4">(内部的には `git fetch` + `git rebase` を実行)</div>
+                        <div class="w-full text-center">
+                           <h4 class="font-bold text-slate-600 mb-2">Pull (Rebase) 後の履歴</h4>
+                           <div class="flex items-center justify-center text-gray-500 mt-12">
+                                <div class="commit bg-slate-200 border-2 border-slate-400">C1</div>
+                                <div class="arrow"></div>
+                                <div class="commit bg-violet-100 border-2 border-violet-500">C2</div>
+                                <div class="arrow"></div>
+                                <div class="commit bg-blue-100 border-2 border-blue-500">C3'</div>
+                           </div>
+                        </div>
+                        <p class="mt-12 text-slate-600"><strong>利点:</strong> マージコミットが作られないため、コミット履歴が一本道になり、非常にクリーンで追跡しやすくなります。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="my-16 lg:my-24">
+                <header class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-900">
+                        結局、<span class="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">どっちを使うべき？</span>
+                    </h2>
+                </header>
+                <div class="max-w-4xl mx-auto overflow-x-auto">
+                    <table class="w-full min-w-[600px] text-left border-collapse">
+                        <thead>
+                            <tr>
+                                <th class="p-4 border-b-2 border-slate-300 font-display font-bold text-slate-800"></th>
+                                <th class="p-4 border-b-2 border-slate-300 font-display font-bold text-slate-800">Merge (`git pull`)</th>
+                                <th class="p-4 border-b-2 border-slate-300 font-display font-bold text-slate-800">Rebase (`git pull --rebase`)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr>
+                                <td class="p-4 border-b border-slate-200 font-semibold text-slate-600">コミット履歴</td>
+                                <td class="p-4 border-b border-slate-200">分岐と統合の履歴が残る（複雑）</td>
+                                <td class="p-4 border-b border-slate-200">一直線でクリーン</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-slate-200 font-semibold text-slate-600">コンフリクト</td>
+                                <td class="p-4 border-b border-slate-200">最後に一度だけ解決する</td>
+                                <td class="p-4 border-b border-slate-200">コミットごとに解決が必要な場合がある</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-slate-200 font-semibold text-slate-600">安全性</td>
+                                <td class="p-4 border-b border-slate-200">履歴を書き換えないため安全</td>
+                                <td class="p-4 border-b border-slate-200">履歴を書き換えるため注意が必要</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b border-slate-200 font-semibold text-slate-600">推奨ケース</td>
+                                <td class="p-4 border-b border-slate-200">`main`や`develop`など、<strong class="text-red-600">共有されているブランチ</strong></td>
+                                <td class="p-4 border-b border-slate-200">作業中の<strong class="text-blue-600">個人のfeatureブランチ</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-8 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-r-lg max-w-4xl mx-auto" role="alert">
+                    <p class="font-bold">最大の注意点</p>
+                    <p>他の人も利用している共有ブランチ（`main`など）に対して `rebase` を行うと、他の開発者のローカルリポジトリと深刻な不整合を引き起こす可能性があります。原則として、<strong class="font-semibold">「一度プッシュして共有したコミットはリベースしない」</strong>と覚えておきましょう。</p>
+                </div>
+            </section>
+            
+            <section class="my-16 lg:my-24">
+                <div class="relative p-8 md:p-12 rounded-lg bg-slate-800 text-white shadow-xl">
+                    <header class="text-center max-w-3xl mx-auto mb-8">
+                        <h2 class="font-display text-3xl md:text-4xl font-bold">
+                            まとめ：エラーを防ぐための<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-violet-400">ベストプラクティス</span>
+                        </h2>
+                    </header>
+                    <div class="max-w-3xl mx-auto text-center text-slate-300 space-y-4">
+                        <p>`non-fast-forward` エラーは、安全なチーム開発のためのGitの親切な警告です。このエラーに遭遇したら、慌てずにリモートの変更を取り込みましょう。</p>
+                        <p class="font-semibold text-white">日々の開発でこのエラーを未然に防ぐには、<strong class="text-yellow-300">作業を開始する前</strong>に `git pull` または `git pull --rebase` を実行し、常にローカルリポジトリを最新の状態に保つ習慣をつけることが最も効果的です。</p>
+                        <div class="mt-8">
+                            <a href="#dummy" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full transition-transform hover:scale-105 inline-block">
+                                <i class="fab fa-github mr-2"></i>GitHubで実践する
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#dummy') {
+                    e.preventDefault();
+                    return false;
+                }
+                const targetId = this.getAttribute('href');
+                if (targetId.length > 1) {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+```
