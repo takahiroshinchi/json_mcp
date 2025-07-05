@@ -11,8 +11,6 @@ This project provides an MCP server that can parse Grapes.js design files and ex
 ```
 gjson/
 ├── server.py                 # Main MCP server implementation
-├── test_mcp.py              # MCP server test client
-├── test_swiper.py           # Swiper component analysis script
 ├── pyproject.toml           # Python project configuration
 ├── design_2.json            # Grapes.js project data (basic components)
 ├── design_3.json            # Grapes.js project data (with Swiper carousel)
@@ -102,11 +100,8 @@ uv run server.py
 ### Testing the Server
 
 ```bash
-# Run basic MCP server tests
-python test_mcp.py
-
-# Run Swiper component analysis
-python test_swiper.py
+# Start the MCP server
+uv run server.py
 ```
 
 ### Example API Calls
@@ -187,11 +182,10 @@ In `design_3.json`:
 
 ## 🧪 Testing
 
-### Test Files
+### Testing Methods
 
-- **`test_mcp.py`**: Basic MCP protocol testing
-- **`test_swiper.py`**: Carousel component analysis
 - **Manual Testing**: Direct server interaction via stdin/stdout
+- **VS Code Integration**: Test through the MCP extension
 
 ### Test Coverage
 
@@ -231,7 +225,7 @@ This MCP server integrates with VS Code through the MCP extension, enabling:
 
 1. Add new tool function with `@mcp.tool()` decorator
 2. Update `alwaysAllow` list in VS Code settings
-3. Test with `test_mcp.py`
+3. Test through VS Code MCP integration
 
 ### Extending Component Analysis
 
@@ -256,9 +250,9 @@ MIT License
 ## 📞 Support
 
 For issues and questions:
-- Check the test scripts for examples
 - Review the MCP protocol documentation
 - Examine the Grapes.js project structure in the JSON files
+- Test functionality through VS Code MCP integration
 
 ## 🔄 Recent Updates
 
