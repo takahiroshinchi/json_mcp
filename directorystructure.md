@@ -85,9 +85,10 @@ HTMLファイルの格納場所
 
 ### ファイル配置
 1. **新しいMCPツール**: `server.py`内で追加実装
-2. **新しいGrapes.jsデータ**: `project_data/`フォルダに配置
+2. **参照用Grapes.jsデータ**: `project_data/`フォルダに配置
 3. **新しいHTMLファイル**: `html/`フォルダに配置
-4. **新しい依存関係**: `pyproject.toml`に追加
+4. **新しいGrapes.jsデータ**: `html_to_json/`フォルダに配置
+5. **新しい依存関係**: `pyproject.toml`に追加
 
 ### 開発規則
 - **Pythonバージョン**: 3.13以上必須

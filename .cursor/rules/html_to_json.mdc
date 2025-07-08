@@ -1,0 +1,370 @@
+---
+description: Apply this rule to the entire repository
+globs: 
+alwaysApply: true
+---
+# HTMLファイルからGrapes.jsプロジェクトJSONへの変換手順
+
+このドキュメントでは、HTMLファイルをGrapes.jsプロジェクトJSONに変換する詳細な手順をまとめています。
+
+## 概要
+
+HTMLファイルをGrapes.jsでビジュアル編集可能なプロジェクトJSONに変換することで、既存のWebページデザインをGrapes.jsエディタで再編集できるようになります。変換されたプロジェクトJSONファイルは`html_to_json/`フォルダに出力されます。
+
+## 前提条件
+
+- Python 3.13+環境
+- MCPサーバー（FastMCP）
+- 以下のツールへのアクセス:
+  - ファイル読み込み・編集機能
+  - JSON構文チェック機能
+
+## 変換プロセス
+
+### Step 1: HTMLファイルの分析
+
+1. **ソースHTMLファイルの確認**
+   ```
+   html/[filename].html を読み込み
+   ```
+
+2. **要素の特定**
+   - メタデータ（title、description）
+   - CSSフレームワーク（Tailwind CSS等）
+   - 外部アセット（画像、フォント）
+   - JavaScript機能（除去対象）
+   - 主要なレイアウト構造
+
+### Step 2: アセット情報の抽出
+
+1. **画像アセットの収集**
+   - `<img src="...">` からURL抽出
+   - 背景画像のCSS定義から抽出
+   - CDN画像の確認
+
+2. **フォントの識別**
+   - Google Fonts等の外部フォント
+   - Font AwesomeアイコンフォントのCDN
+   
+3. **Font Awesome CDN設定の確認**
+   ```html
+   <!-- Font Awesome 6.x CDN例 -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   ```
+   - アイコンクラス名の確認（`fas`, `far`, `fab`, `fal`等）
+   - 使用されているアイコン名の抽出（`fa-home`, `fa-user`等）
+   - バージョン互換性の確認
+
+### Step 3: Grapes.jsプロジェクト構造の作成
+
+#### 基本構造テンプレート:
+```json
+{
+  "assets": [
+    {
+      "type": "image",
+      "src": "https://example.com/image.jpg",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    }
+  ],
+  "styles": [
+    {
+      "selectors": [
+        "body"
+      ],
+      "style": {
+        "margin": "0",
+        "padding": "0",
+        "font-family": "Arial, sans-serif"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "frames": [
+        {
+          "component": {
+            "type": "wrapper",
+            "stylable": [
+              "background",
+              "background-color",
+              "background-image",
+              "background-repeat",
+              "background-attachment",
+              "background-position",
+              "background-size"
+            ],
+            "attributes": {
+              "data-gjs-type": "wrapper"
+            },
+            "components": []
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### コンポーネント構造例:
+
+**基本的なテキストコンポーネント:**
+```json
+{
+  "type": "text",
+  "content": "Hello World",
+  "classes": ["_text"],
+  "attributes": {
+    "id": "unique-id"
+  }
+}
+```
+
+**見出しコンポーネント:**
+```json
+{
+  "tagName": "h1",
+  "type": "heading",
+  "classes": ["_heading"],
+  "attributes": {
+    "id": "heading-id"
+  },
+  "components": [
+    {
+      "type": "text",
+      "content": "見出しテキスト",
+      "classes": ["_text"]
+    }
+  ]
+}
+```
+
+**セクションコンポーネント:**
+```json
+{
+  "tagName": "section",
+  "type": "section",
+  "classes": ["_section", "_container"],
+  "attributes": {
+    "id": "section-id"
+  },
+  "components": []
+}
+```
+
+**Font Awesome アイコン利用例:**
+```json
+{
+  "tagName": "i",
+  "type": "icon",
+  "classes": ["fas", "fa-home"],
+  "attributes": {
+    "id": "icon-id"
+  }
+}
+```
+
+### Step 4: CSS変換プロセス
+
+1. **Grapes.js styles配列への変換**
+   ```json
+   {
+     "selectors": ["#hero-section"],
+     "style": {
+       "background-color": "#f3f4f6",
+       "padding": "2rem",
+       "border-radius": "8px"
+     }
+   }
+   ```
+
+2. **セレクタ形式の統一**
+   - IDセレクタ: `["#element-id"]`
+   - クラスセレクタ: `[".class-name"]`
+   - 要素セレクタ: `["body"]`
+   - 複合セレクタ: `[".class1", ".class2"]`
+
+3. **CSSプロパティの適切な変換**
+   ```json
+   {
+     "selectors": [".gradient-text"],
+     "style": {
+       "background": "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
+       "-webkit-background-clip": "text",
+       "-webkit-text-fill-color": "transparent"
+     }
+   }
+   ```
+
+4. **Tailwind CSSクラスの統合**
+   - Tailwind CSSクラスは要素の`classes`配列に保持
+   - カスタムスタイルのみ`styles`配列に変換
+   - レスポンシブプレフィックス（sm:, md:, lg:）の保持
+
+### Step 5: HTMLコンポーネント変換
+
+1. **Grapes.jsコンポーネント構造への変換**
+   - HTML要素を対応するGrapes.jsコンポーネントタイプに変換
+   - `tagName`, `type`, `classes`, `attributes`の適切な設定
+   - ネストした構造の`components`配列での表現
+
+2. **要素タイプ別変換ルール**
+   ```
+   <h1> → { "tagName": "h1", "type": "heading" }
+   <p> → { "type": "paragraph" }
+   <section> → { "tagName": "section", "type": "section" }
+   <img> → { "tagName": "img", "type": "image" }
+   <i class="fas fa-*"> → { "tagName": "i", "type": "icon" }
+   ```
+
+3. **属性とクラスの変換**
+   - HTMLクラス名をGrapes.js `classes`配列に変換
+   - `id`属性の保持と一意性確保
+   - Tailwind CSSクラスの維持
+
+4. **JavaScript機能の除去**
+   - `<script>`タグの完全除去
+   - インラインイベントハンドラー除去
+   - SPA関連の属性除去
+
+5. **静的コンテンツへの最適化**
+   - フォーム要素の表示専用化
+   - ナビゲーション要素の静的化
+   - モーダル・ドロップダウンの展開状態固定
+
+### Step 6: プロジェクトJSONの生成
+
+1. **出力ファイルの作成**
+   ```
+   html_to_json/[project_name].json
+   ```
+
+2. **JSON構文の検証**
+   - 構文エラーのチェック
+   - 必要に応じて一時ファイルでの検証
+
+3. **最終的なファイル配置**
+   - html_to_jsonフォルダへの出力
+   - バックアップファイルの管理
+
+## 技術的な注意点
+
+### CSSフレームワーク対応
+
+- **Tailwind CSS**: クラス名をそのまま保持
+- **Bootstrap**: 必要に応じてTailwindクラスに変換検討
+- **Font Awesome**: CDN経由での利用（ファイル参照不要）
+  - Font Awesome 6.x の最新版を推奨
+  - アイコンクラス名の保持（`fas`, `far`, `fab`, `fal`）
+  - Tailwind CSSとの組み合わせ対応
+- **カスタムCSS**: Grapes.jsエディタでの編集性を考慮
+
+### Font Awesome 利用時の注意点
+
+- **CDN設定**: HTMLの`<head>`セクションに必ずCDNリンクを含める
+- **アイコンクラス**: `fa-*`クラス名とプレフィックス（`fas`, `far`等）の両方を保持
+- **バージョン管理**: 安定版（6.4.0等）の使用を推奨
+- **パフォーマンス**: 必要なアイコンのみ使用する場合はカスタムビルド検討
+
+### レスポンシブデザイン
+
+- ブレークポイントプレフィックスの保持
+- フレックスボックス・グリッドレイアウト維持
+- モバイルファーストアプローチの継承
+
+### パフォーマンス考慮
+
+- 大型HTMLファイル（2500行以上）の場合は分割処理
+- 画像アセットの最適化検討
+- 不要なCSS定義の除去
+
+## ベストプラクティス
+
+### 1. 段階的変換
+
+```
+HTML分析 → アセット抽出 → CSS変換 → HTML変換 → 統合 → 検証
+```
+
+### 2. バックアップ戦略
+
+- 元HTMLファイルの保持
+- 変換前プロジェクトファイルの保存
+- 段階的なスナップショット作成
+
+### 3. 品質保証
+
+- 視覚的レイアウトの検証
+- レスポンシブ動作の確認
+- Grapes.jsエディタでの編集可能性テスト
+
+## トラブルシューティング
+
+### JSON構文エラー
+
+```bash
+# 構文チェック
+python -m json.tool html_to_json/project.json
+```
+
+### CSS変換問題
+
+- セレクタ名の衝突確認
+- プロパティ値の形式チェック
+- ベンダープレフィックスの保持
+
+### レイアウト崩れ
+
+- Flexbox/Gridプロパティの確認
+- z-indexの調整
+- ポジション指定の見直し
+
+### アセット読み込み問題
+
+- 画像URLの有効性確認
+- CORS設定の考慮
+- CDNリソースの可用性チェック
+
+### Font Awesome関連問題
+
+- **アイコンが表示されない**
+  - CDNリンクの正確性確認
+  - ネットワーク接続の確認
+  - Font Awesomeバージョンの互換性チェック
+  
+- **アイコンクラスが認識されない**
+  ```html
+  <!-- 正しい例 -->
+  <i class="fas fa-home"></i>
+  
+  <!-- 間違った例（プレフィックス不足） -->
+  <i class="fa-home"></i>
+  ```
+  
+- **Grapes.jsエディタでの表示問題**
+  - エディタプレビューでのCDN読み込み確認
+  - キャッシュクリアの実施
+  - 代替CDN（jsDelivr、unpkg等）の検討
+
+## MCPサーバー連携
+
+本変換プロセスはMCPサーバー環境で実行され、以下の機能を活用します：
+
+- ファイル読み書き操作
+- JSON構文検証
+- html_to_jsonフォルダでのプロジェクトファイル管理
+- エラーハンドリング
+
+## 参考リソース
+
+- [Grapes.js Documentation](mdc:https:/grapesjs.com/docs)
+- [Tailwind CSS Reference](mdc:https:/tailwindcss.com/docs)
+- [Font Awesome Icons](mdc:https:/fontawesome.com/icons)
+- [Font Awesome CDN](mdc:https:/cdnjs.com/libraries/font-awesome)
+- [FastMCP Framework](mdc:https:/github.com/FastMCP/fastmcp)
+
+---
+
+**注意**: この変換プロセスは自動化されていますが、複雑なインタラクションやアニメーション要素は手動での調整が必要な場合があります。

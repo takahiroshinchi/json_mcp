@@ -1,0 +1,605 @@
+{
+    "assets": [
+        {
+            "type": "image",
+            "src": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1920&auto=format&fit=crop",
+            "unitDim": "px",
+            "height": 0,
+            "width": 0
+        },
+        {
+            "type": "image",
+            "src": "https://images.unsplash.com/photo-1592609931095-54a2168ae893?q=80&w=1200&auto=format&fit=crop",
+            "unitDim": "px",
+            "height": 0,
+            "width": 0
+        },
+        {
+            "type": "image",
+            "src": "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1200&auto=format&fit=crop",
+            "unitDim": "px",
+            "height": 0,
+            "width": 0
+        }
+    ],
+    "styles": [
+        {
+            "selectors": [
+                "body"
+            ],
+            "style": {
+                "background-color": "#0f172a",
+                "font-family": "sans-serif",
+                "color": "#cbd5e1",
+                "overflow-x": "hidden"
+            }
+        },
+        {
+            "selectors": [
+                ".hero-section"
+            ],
+            "style": {
+                "position": "relative",
+                "min-height": "100vh",
+                "display": "flex",
+                "flex-direction": "column",
+                "align-items": "center",
+                "justify-content": "center",
+                "text-align": "center",
+                "padding": "5rem 0",
+                "overflow": "hidden"
+            }
+        },
+        {
+            "selectors": [
+                ".container"
+            ],
+            "style": {
+                "max-width": "1200px",
+                "margin": "0 auto",
+                "padding": "0 1rem"
+            }
+        }
+    ],
+    "pages": [
+        {
+            "frames": [
+                {
+                    "component": {
+                        "type": "wrapper",
+                        "stylable": [
+                            "background",
+                            "background-color",
+                            "background-image",
+                            "background-repeat",
+                            "background-attachment",
+                            "background-position",
+                            "background-size"
+                        ],
+                        "attributes": {
+                            "data-gjs-type": "wrapper",
+                            "id": "main-wrapper"
+                        },
+                        "components": [
+                            {
+                                "tagName": "main",
+                                "type": "section",
+                                "classes": [
+                                    "bg-slate-900",
+                                    "font-sans",
+                                    "text-slate-300",
+                                    "overflow-x-hidden"
+                                ],
+                                "attributes": {
+                                    "id": "main-content"
+                                },
+                                "components": [
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "absolute",
+                                            "top-0",
+                                            "left-0",
+                                            "w-72",
+                                            "h-72",
+                                            "lg:w-96",
+                                            "lg:h-96",
+                                            "bg-blue-500/20",
+                                            "rounded-full",
+                                            "blur-3xl",
+                                            "-z-10"
+                                        ],
+                                        "attributes": {
+                                            "id": "bg-shape-1"
+                                        }
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "absolute",
+                                            "bottom-0",
+                                            "right-0",
+                                            "w-72",
+                                            "h-72",
+                                            "lg:w-96",
+                                            "lg:h-96",
+                                            "bg-violet-500/20",
+                                            "rounded-full",
+                                            "blur-3xl",
+                                            "-z-10"
+                                        ],
+                                        "attributes": {
+                                            "id": "bg-shape-2"
+                                        }
+                                    },
+                                    {
+                                        "tagName": "article",
+                                        "type": "section",
+                                        "classes": [
+                                            "container",
+                                            "mx-auto",
+                                            "px-4",
+                                            "sm:px-6",
+                                            "lg:px-8"
+                                        ],
+                                        "attributes": {
+                                            "id": "main-article"
+                                        },
+                                        "components": [
+                                            {
+                                                "type": "section",
+                                                "classes": [
+                                                    "relative",
+                                                    "min-h-screen",
+                                                    "flex",
+                                                    "flex-col",
+                                                    "items-center",
+                                                    "justify-center",
+                                                    "text-center",
+                                                    "py-20",
+                                                    "overflow-hidden"
+                                                ],
+                                                "attributes": {
+                                                    "id": "hero-section"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "section",
+                                                        "classes": [
+                                                            "absolute",
+                                                            "inset-0",
+                                                            "-z-20"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "hero-bg"
+                                                        },
+                                                        "components": [
+                                                            {
+                                                                "type": "image",
+                                                                "classes": [
+                                                                    "w-full",
+                                                                    "h-full",
+                                                                    "object-cover",
+                                                                    "opacity-20"
+                                                                ],
+                                                                "attributes": {
+                                                                    "src": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1920&auto=format&fit=crop",
+                                                                    "alt": "近未来的なサーバーラックの青い光が照らすデータセンターの内部"
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "section",
+                                                                "classes": [
+                                                                    "absolute",
+                                                                    "inset-0",
+                                                                    "bg-gradient-to-t",
+                                                                    "from-slate-900",
+                                                                    "via-slate-900/80",
+                                                                    "to-transparent"
+                                                                ],
+                                                                "attributes": {
+                                                                    "id": "hero-gradient"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "section",
+                                                        "classes": [
+                                                            "relative",
+                                                            "z-10"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "hero-content"
+                                                        },
+                                                        "components": [
+                                                            {
+                                                                "tagName": "h1",
+                                                                "type": "heading",
+                                                                "classes": [
+                                                                    "font-heading",
+                                                                    "text-5xl",
+                                                                    "md:text-7xl",
+                                                                    "lg:text-8xl",
+                                                                    "font-bold",
+                                                                    "tracking-tighter",
+                                                                    "mb-4"
+                                                                ],
+                                                                "attributes": {
+                                                                    "id": "hero-title"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "classes": [
+                                                                            "bg-gradient-to-r",
+                                                                            "from-sky-400",
+                                                                            "to-violet-500",
+                                                                            "bg-clip-text",
+                                                                            "text-transparent"
+                                                                        ],
+                                                                        "content": "Cursor"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "tagName": "h2",
+                                                                "type": "heading",
+                                                                "classes": [
+                                                                    "font-heading",
+                                                                    "text-2xl",
+                                                                    "md:text-4xl",
+                                                                    "font-semibold",
+                                                                    "text-slate-100",
+                                                                    "max-w-4xl",
+                                                                    "mx-auto",
+                                                                    "mb-6"
+                                                                ],
+                                                                "attributes": {
+                                                                    "id": "hero-subtitle"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "content": "AI駆動型開発の最前線：Cursorの最新進化がもたらすコード革命"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "paragraph",
+                                                                "classes": [
+                                                                    "max-w-2xl",
+                                                                    "mx-auto",
+                                                                    "text-lg",
+                                                                    "text-slate-400",
+                                                                    "mb-12"
+                                                                ],
+                                                                "attributes": {
+                                                                    "id": "hero-description"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "content": "2025年、ソフトウェア開発の世界はAIの進化により目覚ましい変革を遂げています。中でも、AIを主軸に設計されたコードエディタ「Cursor」は、その最新機能で開発者のワークフローを劇的に変化させ、私たちのコーディング体験を再定義しようとしています。"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "link",
+                                                                "classes": [
+                                                                    "inline-block",
+                                                                    "bg-blue-600",
+                                                                    "text-white",
+                                                                    "font-bold",
+                                                                    "py-3",
+                                                                    "px-8",
+                                                                    "rounded-lg",
+                                                                    "text-lg",
+                                                                    "hover:bg-blue-500",
+                                                                    "transition-all",
+                                                                    "duration-300",
+                                                                    "transform",
+                                                                    "hover:scale-105",
+                                                                    "shadow-lg",
+                                                                    "shadow-blue-500/30"
+                                                                ],
+                                                                "attributes": {
+                                                                    "href": "#features",
+                                                                    "id": "hero-cta"
+                                                                },
+                                                                "content": "その進化を見る"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "section",
+                                                "classes": [
+                                                    "py-20",
+                                                    "lg:py-32"
+                                                ],
+                                                "attributes": {
+                                                    "id": "features-section"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "section",
+                                                        "classes": [
+                                                            "text-center",
+                                                            "mb-16"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "features-header"
+                                                        },
+                                                        "components": [
+                                                            {
+                                                                "tagName": "h2",
+                                                                "type": "heading",
+                                                                "classes": [
+                                                                    "font-heading",
+                                                                    "text-3xl",
+                                                                    "md:text-4xl",
+                                                                    "font-bold",
+                                                                    "text-slate-100"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "content": "Cursor 1.0の登場とAI機能の飛躍的進化"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "paragraph",
+                                                                "classes": [
+                                                                    "mt-4",
+                                                                    "text-lg",
+                                                                    "text-slate-400",
+                                                                    "max-w-3xl",
+                                                                    "mx-auto"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "content": "このメジャーアップデートでは、開発者の生産性を最大化するための革新的なAI機能が多数導入されました。"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "section",
+                                                        "classes": [
+                                                            "grid",
+                                                            "grid-cols-1",
+                                                            "md:grid-cols-2",
+                                                            "lg:grid-cols-3",
+                                                            "gap-8"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "features-grid"
+                                                        },
+                                                        "components": [
+                                                            {
+                                                                "type": "section",
+                                                                "classes": [
+                                                                    "bg-slate-800/50",
+                                                                    "border",
+                                                                    "border-slate-700",
+                                                                    "rounded-xl",
+                                                                    "p-6",
+                                                                    "transition-all",
+                                                                    "duration-300",
+                                                                    "hover:shadow-2xl",
+                                                                    "hover:shadow-blue-500/20",
+                                                                    "hover:-translate-y-2"
+                                                                ],
+                                                                "attributes": {
+                                                                    "id": "feature-card-1"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "section",
+                                                                        "classes": [
+                                                                            "flex",
+                                                                            "items-center",
+                                                                            "justify-center",
+                                                                            "h-12",
+                                                                            "w-12",
+                                                                            "rounded-lg",
+                                                                            "bg-blue-500/20",
+                                                                            "text-blue-400",
+                                                                            "mb-4"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "content": "🤖"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "tagName": "h3",
+                                                                        "type": "heading",
+                                                                        "classes": [
+                                                                            "font-heading",
+                                                                            "text-xl",
+                                                                            "font-semibold",
+                                                                            "text-slate-100",
+                                                                            "mb-2"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "content": "BugBotによる自動レビュー"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "paragraph",
+                                                                        "classes": [
+                                                                            "text-slate-400"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "content": "GitHubのプルリクエストを自動レビューし、潜在的なバグを早期発見。コードレビューの効率を劇的に向上させます。"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "section",
+                                                                "classes": [
+                                                                    "bg-slate-800/50",
+                                                                    "border",
+                                                                    "border-slate-700",
+                                                                    "rounded-xl",
+                                                                    "p-6",
+                                                                    "transition-all",
+                                                                    "duration-300",
+                                                                    "hover:shadow-2xl",
+                                                                    "hover:shadow-blue-500/20",
+                                                                    "hover:-translate-y-2"
+                                                                ],
+                                                                "attributes": {
+                                                                    "id": "feature-card-2"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "section",
+                                                                        "classes": [
+                                                                            "flex",
+                                                                            "items-center",
+                                                                            "justify-center",
+                                                                            "h-12",
+                                                                            "w-12",
+                                                                            "rounded-lg",
+                                                                            "bg-blue-500/20",
+                                                                            "text-blue-400",
+                                                                            "mb-4"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "content": "👥"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "tagName": "h3",
+                                                                        "type": "heading",
+                                                                        "classes": [
+                                                                            "font-heading",
+                                                                            "text-xl",
+                                                                            "font-semibold",
+                                                                            "text-slate-100",
+                                                                            "mb-2"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "content": "バックグラウンドエージェント"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "paragraph",
+                                                                        "classes": [
+                                                                            "text-slate-400"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "content": "AIエージェントがリモート環境で大規模タスクを並行実行。開発者はより複雑な問題解決に集中できます。"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "section",
+                                                                "classes": [
+                                                                    "bg-slate-800/50",
+                                                                    "border",
+                                                                    "border-slate-700",
+                                                                    "rounded-xl",
+                                                                    "p-6",
+                                                                    "transition-all",
+                                                                    "duration-300",
+                                                                    "hover:shadow-2xl",
+                                                                    "hover:shadow-blue-500/20",
+                                                                    "hover:-translate-y-2"
+                                                                ],
+                                                                "attributes": {
+                                                                    "id": "feature-card-3"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "section",
+                                                                        "classes": [
+                                                                            "flex",
+                                                                            "items-center",
+                                                                            "justify-center",
+                                                                            "h-12",
+                                                                            "w-12",
+                                                                            "rounded-lg",
+                                                                            "bg-blue-500/20",
+                                                                            "text-blue-400",
+                                                                            "mb-4"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "content": "🧠"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "tagName": "h3",
+                                                                        "type": "heading",
+                                                                        "classes": [
+                                                                            "font-heading",
+                                                                            "text-xl",
+                                                                            "font-semibold",
+                                                                            "text-slate-100",
+                                                                            "mb-2"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "content": "「Memories」機能"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "paragraph",
+                                                                        "classes": [
+                                                                            "text-slate-400"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "content": "過去のチャットを記憶・参照し、ユーザーの好みやプロジェクトの文脈を学習。よりパーソナライズされたサポートを提供。"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+} 

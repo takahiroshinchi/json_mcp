@@ -1,0 +1,1424 @@
+{
+  "assets": [
+    {
+      "type": "image",
+      "src": "https://unsplash.it/1920/1080?image=1074&blur=2",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://picsum.photos/seed/immersive%20storytelling/800/600",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://picsum.photos/seed/cinematic%20visual%20effects/800/600",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://unsplash.it/800/600?image=788",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://unsplash.it/800/600?image=175",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://unsplash.it/800/600?image=385",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://picsum.photos/seed/futuristic%20intricate%20architecture/1200/800",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://picsum.photos/seed/intense%20action%20scene/800/600",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://unsplash.it/800/600?image=1075",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://unsplash.it/800/600?image=960",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://unsplash.it/800/600?image=146",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://unsplash.it/800/600?image=790",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    }
+  ],
+  "styles": [
+    {
+      "selectors": ["body"],
+      "style": {
+        "margin": "0",
+        "padding": "0",
+        "font-family": "\"Noto Sans JP\", Inter, sans-serif",
+        "background-color": "#0f172a",
+        "color": "#cbd5e1",
+        "overflow-x": "hidden"
+      }
+    },
+    {
+      "selectors": [".clip-path-slash"],
+      "style": {
+        "clip-path": "polygon(0 0, 100% 5%, 100% 100%, 0 95%)"
+      }
+    },
+    {
+      "selectors": [".clip-path-slash-rev"],
+      "style": {
+        "clip-path": "polygon(0 5%, 100% 0, 100% 95%, 0 100%)"
+      }
+    },
+    {
+      "selectors": [".gradient-text"],
+      "style": {
+        "background": "linear-gradient(to right, #a78bfa, #ec4899, #22d3ee)",
+        "-webkit-background-clip": "text",
+        "-webkit-text-fill-color": "transparent"
+      }
+    },
+    {
+      "selectors": [".glass-card"],
+      "style": {
+        "background": "rgba(30, 41, 59, 0.8)",
+        "backdrop-filter": "blur(10px)",
+        "border": "1px solid rgba(148, 163, 184, 0.2)",
+        "border-radius": "1rem"
+      }
+    },
+    {
+      "selectors": [".minimal-card"],
+      "style": {
+        "border": "1px solid #374151",
+        "border-radius": "0.5rem",
+        "transition": "all 0.3s ease"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "frames": [
+        {
+          "component": {
+            "type": "wrapper",
+            "stylable": [
+              "background",
+              "background-color",
+              "background-image",
+              "background-repeat",
+              "background-attachment",
+              "background-position",
+              "background-size"
+            ],
+            "attributes": {
+              "data-gjs-type": "wrapper",
+              "id": "wrapper"
+            },
+            "components": [
+              {
+                "tagName": "div",
+                "type": "div",
+                "classes": ["absolute", "top-0", "left-0", "w-72", "h-72", "bg-violet-600/20", "rounded-full", "blur-3xl", "opacity-50", "animate-clean-float", "-z-10"],
+                "attributes": {
+                  "id": "bg-shape-1"
+                }
+              },
+              {
+                "tagName": "div",
+                "type": "div",
+                "classes": ["absolute", "bottom-0", "right-0", "w-96", "h-96", "bg-cyan-600/20", "rounded-full", "blur-3xl", "opacity-50", "animate-clean-float", "-z-10"],
+                "attributes": {
+                  "id": "bg-shape-2"
+                }
+              },
+              {
+                "tagName": "div",
+                "type": "div",
+                "classes": ["absolute", "top-1/2", "left-1/3", "w-80", "h-80", "bg-fuchsia-500/10", "rounded-full", "blur-3xl", "opacity-40", "animate-clean-pulse", "-z-10"],
+                "attributes": {
+                  "id": "bg-shape-3"
+                }
+              },
+              {
+                "tagName": "main",
+                "type": "main",
+                "attributes": {
+                  "id": "main-content"
+                },
+                "components": [
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["relative", "min-h-screen", "flex", "items-center", "justify-center", "text-center", "text-white", "p-8", "overflow-hidden"],
+                    "attributes": {
+                      "id": "hero"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "div",
+                        "classes": ["absolute", "inset-0", "bg-cover", "bg-center", "-z-20"],
+                        "attributes": {
+                          "id": "hero-bg",
+                          "style": "background-image: url('https://unsplash.it/1920/1080?image=1074&blur=2');"
+                        }
+                      },
+                      {
+                        "tagName": "div",
+                        "type": "div",
+                        "classes": ["absolute", "inset-0", "bg-slate-900/70", "backdrop-blur-sm", "-z-10"],
+                        "attributes": {
+                          "id": "hero-overlay"
+                        }
+                      },
+                      {
+                        "tagName": "div",
+                        "type": "div",
+                        "classes": ["z-10", "max-w-4xl", "mx-auto"],
+                        "attributes": {
+                          "id": "hero-content"
+                        },
+                        "components": [
+                          {
+                            "type": "text",
+                            "classes": ["mb-4", "text-lg", "md:text-xl", "font-display", "font-semibold", "tracking-wider"],
+                            "content": "その刃が、宿命を断ち切る。",
+                            "attributes": {
+                              "id": "hero-subtitle"
+                            }
+                          },
+                          {
+                            "tagName": "h1",
+                            "type": "heading",
+                            "classes": ["font-display", "font-black", "text-4xl", "sm:text-6xl", "md:text-7xl", "lg:text-8xl", "leading-tight", "mb-6"],
+                            "attributes": {
+                              "id": "hero-title"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "classes": ["gradient-text"],
+                                "content": "無限城編",
+                                "attributes": {
+                                  "id": "hero-title-1"
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "classes": ["block", "mt-2"],
+                                "content": "最終決戦、開幕。",
+                                "attributes": {
+                                  "id": "hero-title-2"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "h2",
+                            "type": "heading",
+                            "classes": ["text-xl", "md:text-3xl", "font-bold", "font-sans", "mb-8"],
+                            "attributes": {
+                              "id": "hero-subtitle-2"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "content": "『劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来』",
+                                "attributes": {
+                                  "id": "movie-title"
+                                }
+                              },
+                              {
+                                "tagName": "br",
+                                "type": "br"
+                              },
+                              {
+                                "type": "text",
+                                "classes": ["text-cyan-400"],
+                                "content": "2025.7.18 [FRI] ROADSHOW",
+                                "attributes": {
+                                  "id": "release-date"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "a",
+                            "type": "link",
+                            "classes": ["inline-block", "bg-gradient-to-r", "from-violet-500", "to-cyan-500", "hover:from-violet-600", "hover:to-cyan-600", "text-white", "font-bold", "py-3", "px-8", "rounded-full", "shadow-lg", "hover:shadow-cyan-500/30", "transition-all", "duration-300", "transform", "hover:scale-105"],
+                            "attributes": {
+                              "href": "#dummy",
+                              "id": "hero-cta"
+                            },
+                            "components": [
+                              {
+                                "tagName": "i",
+                                "type": "icon",
+                                "classes": ["fas", "fa-ticket-alt", "mr-2"],
+                                "attributes": {
+                                  "id": "hero-icon"
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "content": "世界最速上映をチェック",
+                                "attributes": {
+                                  "id": "hero-cta-text"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["py-20", "md:py-32", "px-8"],
+                    "attributes": {
+                      "id": "intro"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "div",
+                        "classes": ["container", "mx-auto", "max-w-6xl", "grid", "md:grid-cols-2", "gap-12", "items-center"],
+                        "attributes": {
+                          "id": "intro-container"
+                        },
+                        "components": [
+                          {
+                            "tagName": "div",
+                            "type": "div",
+                            "classes": [],
+                            "attributes": {
+                              "id": "intro-text"
+                            },
+                            "components": [
+                              {
+                                "tagName": "h2",
+                                "type": "heading",
+                                "classes": ["font-display", "font-bold", "text-3xl", "md:text-4xl", "mb-4", "text-white"],
+                                "attributes": {
+                                  "id": "intro-heading"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "あの興奮が、再び。そして、想像を超える領域へ――。",
+                                    "attributes": {
+                                      "id": "intro-heading-text"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "div",
+                                "type": "div",
+                                "classes": ["w-24", "h-1", "bg-gradient-to-r", "from-violet-500", "to-cyan-500", "mb-6"],
+                                "attributes": {
+                                  "id": "intro-divider"
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "classes": ["text-lg", "leading-relaxed", "mb-4"],
+                                "content": "2025年7月18日公開の『劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来』は、単なる最新作ではありません。「鬼滅の刃」の物語がクライマックスへと向かう、まさに最終決戦の幕開けとなる歴史的瞬間です。",
+                                "attributes": {
+                                  "id": "intro-text-1"
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "classes": ["leading-relaxed"],
+                                "content": "これまでにも数々の感動と興奮を私たちに届けてくれた鬼滅の刃ですが、今回はその集大成として、一切の妥協を許さない映像体験が約束されています。第一章が告げるのは、壮大な最終章の序曲。この物語が、どのように歴史に刻まれるのか、その目撃者となる準備はできていますか？",
+                                "attributes": {
+                                  "id": "intro-text-2"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "div",
+                            "type": "div",
+                            "classes": [],
+                            "attributes": {
+                              "id": "intro-image"
+                            },
+                            "components": [
+                              {
+                                "tagName": "img",
+                                "type": "image",
+                                "classes": ["rounded-xl", "shadow-2xl", "shadow-violet-900/50", "transform", "md:rotate-3", "transition-transform", "duration-500", "hover:rotate-0", "hover:scale-105"],
+                                "attributes": {
+                                  "src": "https://picsum.photos/seed/immersive%20storytelling/800/600",
+                                  "alt": "鬼殺隊の剣士が壮大な風景を前に決意を固める様子",
+                                  "id": "intro-image-img"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["py-12", "px-8", "bg-slate-900/50"],
+                    "attributes": {
+                      "id": "related-1"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "div",
+                        "classes": ["container", "mx-auto", "max-w-6xl"],
+                        "attributes": {
+                          "id": "related-1-container"
+                        },
+                        "components": [
+                          {
+                            "tagName": "h3",
+                            "type": "heading",
+                            "classes": ["text-center", "font-display", "font-bold", "text-2xl", "md:text-3xl", "mb-10", "text-white"],
+                            "attributes": {
+                              "id": "related-1-heading"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "content": "これまでの軌跡を振り返る",
+                                "attributes": {
+                                  "id": "related-1-heading-text"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "div",
+                            "type": "div",
+                            "classes": ["grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-4", "gap-8"],
+                            "attributes": {
+                              "id": "related-1-grid"
+                            },
+                            "components": [
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800", "rounded-lg", "overflow-hidden", "shadow-lg", "hover:shadow-violet-500/20", "transition-all", "duration-300", "transform", "hover:-translate-y-2"],
+                                "attributes": {
+                                  "href": "#dummy",
+                                  "id": "related-1-item-1"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:opacity-80", "transition-opacity"],
+                                    "attributes": {
+                                      "src": "https://picsum.photos/seed/cinematic%20visual%20effects/800/600",
+                                      "alt": "無限列車編のキービジュアル",
+                                      "id": "related-1-img-1"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "div",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "related-1-content-1"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-white", "text-lg"],
+                                        "attributes": {
+                                          "id": "related-1-title-1"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "無限列車編 Blu-ray",
+                                            "attributes": {
+                                              "id": "related-1-title-text-1"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "text",
+                                        "classes": ["text-sm", "text-slate-400", "mt-1"],
+                                        "content": "心を燃やせ。伝説の始まり。",
+                                        "attributes": {
+                                          "id": "related-1-desc-1"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800", "rounded-lg", "overflow-hidden", "shadow-lg", "hover:shadow-violet-500/20", "transition-all", "duration-300", "transform", "hover:-translate-y-2"],
+                                "attributes": {
+                                  "href": "#dummy",
+                                  "id": "related-1-item-2"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:opacity-80", "transition-opacity"],
+                                    "attributes": {
+                                      "src": "https://unsplash.it/800/600?image=788",
+                                      "alt": "遊郭編のキービジュアル",
+                                      "id": "related-1-img-2"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "div",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "related-1-content-2"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-white", "text-lg"],
+                                        "attributes": {
+                                          "id": "related-1-title-2"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "遊郭編 Blu-ray",
+                                            "attributes": {
+                                              "id": "related-1-title-text-2"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "text",
+                                        "classes": ["text-sm", "text-slate-400", "mt-1"],
+                                        "content": "ド派手な戦いをもう一度。",
+                                        "attributes": {
+                                          "id": "related-1-desc-2"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800", "rounded-lg", "overflow-hidden", "shadow-lg", "hover:shadow-violet-500/20", "transition-all", "duration-300", "transform", "hover:-translate-y-2"],
+                                "attributes": {
+                                  "href": "#dummy",
+                                  "id": "related-1-item-3"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:opacity-80", "transition-opacity"],
+                                    "attributes": {
+                                      "src": "https://unsplash.it/800/600?image=175",
+                                      "alt": "刀鍛冶の里編のキービジュアル",
+                                      "id": "related-1-img-3"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "div",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "related-1-content-3"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-white", "text-lg"],
+                                        "attributes": {
+                                          "id": "related-1-title-3"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "刀鍛冶の里編 Blu-ray",
+                                            "attributes": {
+                                              "id": "related-1-title-text-3"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "text",
+                                        "classes": ["text-sm", "text-slate-400", "mt-1"],
+                                        "content": "受け継がれる想い。",
+                                        "attributes": {
+                                          "id": "related-1-desc-3"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800", "rounded-lg", "overflow-hidden", "shadow-lg", "hover:shadow-violet-500/20", "transition-all", "duration-300", "transform", "hover:-translate-y-2"],
+                                "attributes": {
+                                  "href": "#dummy",
+                                  "id": "related-1-item-4"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:opacity-80", "transition-opacity"],
+                                    "attributes": {
+                                      "src": "https://unsplash.it/800/600?image=385",
+                                      "alt": "鬼滅の刃のオリジナルサウンドトラックのジャケット",
+                                      "id": "related-1-img-4"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "div",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "related-1-content-4"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-white", "text-lg"],
+                                        "attributes": {
+                                          "id": "related-1-title-4"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "オリジナル・サウンドトラック",
+                                            "attributes": {
+                                              "id": "related-1-title-text-4"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "text",
+                                        "classes": ["text-sm", "text-slate-400", "mt-1"],
+                                        "content": "魂を揺さぶる音楽集。",
+                                        "attributes": {
+                                          "id": "related-1-desc-4"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["py-20", "md:py-32", "px-8", "overflow-hidden"],
+                    "attributes": {
+                      "id": "features"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "div",
+                        "classes": ["container", "mx-auto", "max-w-6xl"],
+                        "attributes": {
+                          "id": "features-container"
+                        },
+                        "components": [
+                          {
+                            "tagName": "div",
+                            "type": "div",
+                            "classes": ["text-center", "mb-16"],
+                            "attributes": {
+                              "id": "features-header"
+                            },
+                            "components": [
+                              {
+                                "tagName": "h2",
+                                "type": "heading",
+                                "classes": ["font-display", "font-black", "text-3xl", "md:text-5xl", "mb-4"],
+                                "attributes": {
+                                  "id": "features-title"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "classes": ["gradient-text"],
+                                    "content": "ufotable",
+                                    "attributes": {
+                                      "id": "features-title-ufotable"
+                                    }
+                                  },
+                                  {
+                                    "type": "text",
+                                    "content": "が織りなす究極の映像美",
+                                    "attributes": {
+                                      "id": "features-title-text"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "text",
+                                "classes": ["max-w-3xl", "mx-auto", "text-lg", "text-slate-400"],
+                                "content": "「鬼滅の刃」の代名詞\"神作画\"は、『無限城編』でその真価を極限まで引き上げます。",
+                                "attributes": {
+                                  "id": "features-subtitle"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "div",
+                            "type": "div",
+                            "classes": ["grid", "md:grid-cols-2", "lg:grid-cols-4", "gap-8"],
+                            "attributes": {
+                              "id": "features-grid"
+                            },
+                            "components": [
+                              {
+                                "tagName": "div",
+                                "type": "div",
+                                "classes": ["minimal-card", "p-6", "bg-slate-800/50", "border-slate-700"],
+                                "attributes": {
+                                  "id": "feature-1"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "i",
+                                    "type": "icon",
+                                    "classes": ["fas", "fa-palette", "text-3xl", "text-cyan-400", "mb-4"],
+                                    "attributes": {
+                                      "id": "feature-1-icon"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "h3",
+                                    "type": "heading",
+                                    "classes": ["font-bold", "text-xl", "text-white", "mb-2"],
+                                    "attributes": {
+                                      "id": "feature-1-title"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "text",
+                                        "content": "緻密な背景と人物描写",
+                                        "attributes": {
+                                          "id": "feature-1-title-text"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "text",
+                                    "classes": ["text-slate-400"],
+                                    "content": "無限城の歪んだ空間を息をのむ臨場感で再現。キャラクターの感情の機微を捉えた豊かな表情、一挙手一投足に宿る生命力。",
+                                    "attributes": {
+                                      "id": "feature-1-desc"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "div",
+                                "type": "div",
+                                "classes": ["minimal-card", "p-6", "bg-slate-800/50", "border-slate-700"],
+                                "attributes": {
+                                  "id": "feature-2"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "i",
+                                    "type": "icon",
+                                    "classes": ["fas", "fa-bolt", "text-3xl", "text-violet-400", "mb-4"],
+                                    "attributes": {
+                                      "id": "feature-2-icon"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "h3",
+                                    "type": "heading",
+                                    "classes": ["font-bold", "text-xl", "text-white", "mb-2"],
+                                    "attributes": {
+                                      "id": "feature-2-title"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "text",
+                                        "content": "息をのむ戦闘シーン",
+                                        "attributes": {
+                                          "id": "feature-2-title-text"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "text",
+                                    "classes": ["text-slate-400"],
+                                    "content": "CGと手描きが織りなす戦闘はもはや芸術の域。技が画面を彩る様は、まるで目の前で繰り広げられているかのような迫力。",
+                                    "attributes": {
+                                      "id": "feature-2-desc"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "div",
+                                "type": "div",
+                                "classes": ["minimal-card", "p-6", "bg-slate-800/50", "border-slate-700"],
+                                "attributes": {
+                                  "id": "feature-3"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "i",
+                                    "type": "icon",
+                                    "classes": ["fas", "fa-camera-retro", "text-3xl", "text-fuchsia-400", "mb-4"],
+                                    "attributes": {
+                                      "id": "feature-3-icon"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "h3",
+                                    "type": "heading",
+                                    "classes": ["font-bold", "text-xl", "text-white", "mb-2"],
+                                    "attributes": {
+                                      "id": "feature-3-title"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "text",
+                                        "content": "独自のカメラワークと演出",
+                                        "attributes": {
+                                          "id": "feature-3-title-text"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "text",
+                                    "classes": ["text-slate-400"],
+                                    "content": "計算され尽くした演出は観客の視点を巧みに誘導し、一瞬たりとも目が離せない究極の映像体験を創り出します。",
+                                    "attributes": {
+                                      "id": "feature-3-desc"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "div",
+                                "type": "div",
+                                "classes": ["minimal-card", "p-6", "bg-slate-800/50", "border-slate-700"],
+                                "attributes": {
+                                  "id": "feature-4"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "i",
+                                    "type": "icon",
+                                    "classes": ["fas", "fa-users-gear", "text-3xl", "text-teal-400", "mb-4"],
+                                    "attributes": {
+                                      "id": "feature-4-icon"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "h3",
+                                    "type": "heading",
+                                    "classes": ["font-bold", "text-xl", "text-white", "mb-2"],
+                                    "attributes": {
+                                      "id": "feature-4-title"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "text",
+                                        "content": "内製による高クオリティ",
+                                        "attributes": {
+                                          "id": "feature-4-title-text"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "text",
+                                    "classes": ["text-slate-400"],
+                                    "content": "作画、撮影、美術、3DCGの多くを自社で手掛け、スタッフ間の密な連携により、常に最高品質を維持しています。",
+                                    "attributes": {
+                                      "id": "feature-4-desc"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["relative", "py-20", "md:py-40", "px-8", "my-12"],
+                    "attributes": {
+                      "id": "climax"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "div",
+                        "classes": ["absolute", "inset-0", "bg-cover", "bg-center", "bg-fixed", "-z-20"],
+                        "attributes": {
+                          "id": "climax-bg",
+                          "style": "background-image: url('https://picsum.photos/seed/futuristic%20intricate%20architecture/1200/800');"
+                        }
+                      },
+                      {
+                        "tagName": "div",
+                        "type": "div",
+                        "classes": ["absolute", "inset-0", "bg-slate-900/80", "backdrop-blur-md", "-z-10"],
+                        "attributes": {
+                          "id": "climax-overlay"
+                        }
+                      },
+                      {
+                        "tagName": "div",
+                        "type": "div",
+                        "classes": ["container", "mx-auto", "max-w-4xl", "text-center"],
+                        "attributes": {
+                          "id": "climax-container"
+                        },
+                        "components": [
+                          {
+                            "tagName": "div",
+                            "type": "div",
+                            "classes": ["glass-card", "p-8", "md:p-12"],
+                            "attributes": {
+                              "id": "climax-content"
+                            },
+                            "components": [
+                              {
+                                "tagName": "h2",
+                                "type": "heading",
+                                "classes": ["font-display", "font-bold", "text-3xl", "md:text-4xl", "mb-4", "text-white"],
+                                "attributes": {
+                                  "id": "climax-title"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "劇場でしか味わえない、五感を揺さぶる体験",
+                                    "attributes": {
+                                      "id": "climax-title-text"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "div",
+                                "type": "div",
+                                "classes": ["w-24", "h-1", "bg-gradient-to-r", "from-violet-500", "to-cyan-500", "mb-6", "mx-auto"],
+                                "attributes": {
+                                  "id": "climax-divider"
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "classes": ["text-lg", "leading-relaxed", "text-slate-200", "mb-4"],
+                                "content": "『劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来』は、ただのアニメ映画ではありません。それは、五感を揺さぶる総合エンターテイメント体験です。",
+                                "attributes": {
+                                  "id": "climax-text-1"
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "classes": ["leading-relaxed", "text-slate-200"],
+                                "content": "ufotableが贈る\"神作画\"の映像美はもちろんのこと、AimerとLiSAが担当するW主題歌が物語に深みを与え、あなたの心を揺さぶります。映画館の大スクリーンと最高の音響環境でこそ、その真の迫力と感動を味わうことができます。",
+                                "attributes": {
+                                  "id": "climax-text-2"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["py-20", "md:py-32", "px-8"],
+                    "attributes": {
+                      "id": "experience"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "div",
+                        "classes": ["container", "mx-auto", "max-w-6xl", "grid", "md:grid-cols-2", "gap-12", "items-center"],
+                        "attributes": {
+                          "id": "experience-container"
+                        },
+                        "components": [
+                          {
+                            "tagName": "div",
+                            "type": "div",
+                            "classes": ["order-2", "md:order-1"],
+                            "attributes": {
+                              "id": "experience-text"
+                            },
+                            "components": [
+                              {
+                                "tagName": "h2",
+                                "type": "heading",
+                                "classes": ["font-display", "font-bold", "text-3xl", "md:text-4xl", "mb-4", "text-white"],
+                                "attributes": {
+                                  "id": "experience-title"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "伝説を目撃せよ。",
+                                    "attributes": {
+                                      "id": "experience-title-text"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "div",
+                                "type": "div",
+                                "classes": ["w-24", "h-1", "bg-gradient-to-r", "from-violet-500", "to-cyan-500", "mb-6"],
+                                "attributes": {
+                                  "id": "experience-divider"
+                                }
+                              },
+                              {
+                                "type": "text",
+                                "classes": ["text-lg", "leading-relaxed", "mb-6"],
+                                "content": "炭治郎たちの息遣い、刀と刀がぶつかり合う音、そしてキャラクターたちの感情が迸る瞬間を、全身で感じ取ってください。これまでの「鬼滅の刃」を愛してきた方はもちろん、まだこの世界に触れたことのない方も、この『無限城編』からその魅力に圧倒されること間違いなしです。",
+                                "attributes": {
+                                  "id": "experience-text-content"
+                                }
+                              },
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["inline-block", "bg-white", "text-slate-900", "font-bold", "py-3", "px-8", "rounded-full", "shadow-lg", "hover:shadow-white/30", "transition-all", "duration-300", "transform", "hover:scale-105"],
+                                "attributes": {
+                                  "href": "#dummy",
+                                  "id": "experience-cta"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "i",
+                                    "type": "icon",
+                                    "classes": ["fas", "fa-film", "mr-2"],
+                                    "attributes": {
+                                      "id": "experience-icon"
+                                    }
+                                  },
+                                  {
+                                    "type": "text",
+                                    "content": "上映劇場を探す",
+                                    "attributes": {
+                                      "id": "experience-cta-text"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "div",
+                            "type": "div",
+                            "classes": ["order-1", "md:order-2"],
+                            "attributes": {
+                              "id": "experience-image"
+                            },
+                            "components": [
+                              {
+                                "tagName": "img",
+                                "type": "image",
+                                "classes": ["rounded-xl", "shadow-2xl", "shadow-cyan-900/50", "transform", "md:-rotate-3", "transition-transform", "duration-500", "hover:rotate-0", "hover:scale-105"],
+                                "attributes": {
+                                  "src": "https://picsum.photos/seed/intense%20action%20scene/800/600",
+                                  "alt": "激しい戦闘シーンで火花が散る様子",
+                                  "id": "experience-image-img"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["py-12", "px-8", "bg-slate-900/50"],
+                    "attributes": {
+                      "id": "related-2"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "div",
+                        "classes": ["container", "mx-auto", "max-w-6xl"],
+                        "attributes": {
+                          "id": "related-2-container"
+                        },
+                        "components": [
+                          {
+                            "tagName": "h3",
+                            "type": "heading",
+                            "classes": ["text-center", "font-display", "font-bold", "text-2xl", "md:text-3xl", "mb-10", "text-white"],
+                            "attributes": {
+                              "id": "related-2-heading"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "content": "限定グッズを手に入れよう",
+                                "attributes": {
+                                  "id": "related-2-heading-text"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "div",
+                            "type": "div",
+                            "classes": ["grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-4", "gap-8"],
+                            "attributes": {
+                              "id": "related-2-grid"
+                            },
+                            "components": [
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800", "rounded-lg", "overflow-hidden", "shadow-lg", "hover:shadow-cyan-500/20", "transition-all", "duration-300", "transform", "hover:-translate-y-2"],
+                                "attributes": {
+                                  "href": "#dummy",
+                                  "id": "related-2-item-1"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:opacity-80", "transition-opacity"],
+                                    "attributes": {
+                                      "src": "https://unsplash.it/800/600?image=1075",
+                                      "alt": "劇場版限定アクリルスタンド",
+                                      "id": "related-2-img-1"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "div",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "related-2-content-1"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-white", "text-lg"],
+                                        "attributes": {
+                                          "id": "related-2-title-1"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "劇場版アクリルスタンド",
+                                            "attributes": {
+                                              "id": "related-2-title-text-1"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "text",
+                                        "classes": ["text-sm", "text-slate-400", "mt-1"],
+                                        "content": "猗窩座 vs 炭治郎＆義勇",
+                                        "attributes": {
+                                          "id": "related-2-desc-1"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800", "rounded-lg", "overflow-hidden", "shadow-lg", "hover:shadow-cyan-500/20", "transition-all", "duration-300", "transform", "hover:-translate-y-2"],
+                                "attributes": {
+                                  "href": "#dummy",
+                                  "id": "related-2-item-2"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:opacity-80", "transition-opacity"],
+                                    "attributes": {
+                                      "src": "https://unsplash.it/800/600?image=960",
+                                      "alt": "無限城コンセプトアートブック",
+                                      "id": "related-2-img-2"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "div",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "related-2-content-2"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-white", "text-lg"],
+                                        "attributes": {
+                                          "id": "related-2-title-2"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "公式コンセプトアートブック",
+                                            "attributes": {
+                                              "id": "related-2-title-text-2"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "text",
+                                        "classes": ["text-sm", "text-slate-400", "mt-1"],
+                                        "content": "ufotableの仕事の神髄。",
+                                        "attributes": {
+                                          "id": "related-2-desc-2"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800", "rounded-lg", "overflow-hidden", "shadow-lg", "hover:shadow-cyan-500/20", "transition-all", "duration-300", "transform", "hover:-translate-y-2"],
+                                "attributes": {
+                                  "href": "#dummy",
+                                  "id": "related-2-item-3"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:opacity-80", "transition-opacity"],
+                                    "attributes": {
+                                      "src": "https://unsplash.it/800/600?image=146",
+                                      "alt": "主題歌CDの限定盤",
+                                      "id": "related-2-img-3"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "div",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "related-2-content-3"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-white", "text-lg"],
+                                        "attributes": {
+                                          "id": "related-2-title-3"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "W主題歌 限定盤CD",
+                                            "attributes": {
+                                              "id": "related-2-title-text-3"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "text",
+                                        "classes": ["text-sm", "text-slate-400", "mt-1"],
+                                        "content": "Aimer & LiSAの楽曲を収録。",
+                                        "attributes": {
+                                          "id": "related-2-desc-3"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800", "rounded-lg", "overflow-hidden", "shadow-lg", "hover:shadow-cyan-500/20", "transition-all", "duration-300", "transform", "hover:-translate-y-2"],
+                                "attributes": {
+                                  "href": "#dummy",
+                                  "id": "related-2-item-4"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:opacity-80", "transition-opacity"],
+                                    "attributes": {
+                                      "src": "https://unsplash.it/800/600?image=790",
+                                      "alt": "キャラクターモチーフのTシャツ",
+                                      "id": "related-2-img-4"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "div",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "related-2-content-4"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-white", "text-lg"],
+                                        "attributes": {
+                                          "id": "related-2-title-4"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "柱モチーフ Tシャツ",
+                                            "attributes": {
+                                              "id": "related-2-title-text-4"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "text",
+                                        "classes": ["text-sm", "text-slate-400", "mt-1"],
+                                        "content": "推し柱のデザインを纏う。",
+                                        "attributes": {
+                                          "id": "related-2-desc-4"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tagName": "footer",
+                "type": "footer",
+                "classes": ["text-center", "py-8", "px-4", "bg-slate-900"],
+                "attributes": {
+                  "id": "footer"
+                },
+                "components": [
+                  {
+                    "type": "text",
+                    "classes": ["text-slate-500", "text-sm"],
+                    "content": "さあ、この夏、歴史に残る最終決戦の幕開けを、ぜひ劇場で体感してください！",
+                    "attributes": {
+                      "id": "footer-text-1"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "classes": ["text-slate-600", "text-xs", "mt-2"],
+                    "content": "© 2025 Kimetsu no Yaiba The Movie Project. All Rights Reserved.",
+                    "attributes": {
+                      "id": "footer-text-2"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+} 

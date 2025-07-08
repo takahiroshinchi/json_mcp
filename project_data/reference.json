@@ -1,0 +1,1582 @@
+{
+    "assets": [
+        {
+            "type": "image",
+            "src": "https://picsum.photos/seed/sleek%20modern%20design/800/600",
+            "unitDim": "px",
+            "height": 0,
+            "width": 0
+        },
+        {
+            "type": "image",
+            "src": "https://media-dev.gampla.jp/image/visual/4/aa4cf415-672f-483b-b167-8371dc4c08c1.jpg",
+            "unitDim": "px",
+            "height": 0,
+            "width": 0,
+            "data-team-image": true
+        },
+        {
+            "type": "image",
+            "src": "https://media-dev.gampla.jp/image/visual/3/276390ee-ebdd-49bb-ba28-fd2f7446ff98.png",
+            "unitDim": "px",
+            "height": 0,
+            "width": 0,
+            "data-team-image": true
+        },
+        {
+            "type": "image",
+            "src": "https://media-dev.gampla.jp/image/visual/1/8626f439-2b9d-4bd4-ba74-de7fb0a140b5.png",
+            "unitDim": "px",
+            "height": 0,
+            "width": 0,
+            "data-team-image": true
+        }
+    ],
+    "styles": [
+        {
+            "selectors": [
+                "#ijja"
+            ],
+            "style": {
+                "max-width": "1024px"
+            }
+        },
+        {
+            "selectors": [
+                "#ij4i"
+            ],
+            "style": {
+                "padding": "16px 16px 16px 16px"
+            }
+        },
+        {
+            "selectors": [
+                "#izhck"
+            ],
+            "style": {
+                "gap": "8px",
+                "display": "flex",
+                "padding": "16px 16px 16px 16px"
+            }
+        },
+        {
+            "selectors": [
+                "#itdrh"
+            ],
+            "style": {
+                "padding": "16px 16px 16px 16px"
+            }
+        },
+        {
+            "selectors": [
+                "#io7r9"
+            ],
+            "style": {
+                "padding": "16px 16px 16px 16px"
+            }
+        },
+        {
+            "selectors": [
+                "#igmwo"
+            ],
+            "style": {
+                "color": "black"
+            }
+        },
+        {
+            "selectors": [
+                "#iijqr"
+            ],
+            "style": {
+                "color": "black"
+            }
+        },
+        {
+            "selectors": [
+                "#icnz6"
+            ],
+            "style": {
+                "padding": "16px 16px 16px 16px"
+            }
+        },
+        {
+            "selectors": [
+                "#is5l5"
+            ],
+            "style": {
+                "display": "inline-block",
+                "padding": "5px",
+                "min-width": "50px",
+                "min-height": "50px"
+            }
+        },
+        {
+            "selectors": [
+                "#i00o5"
+            ],
+            "style": {
+                "padding": "16px 16px 16px 16px"
+            }
+        },
+        {
+            "selectors": [
+                "#ihzv2"
+            ],
+            "style": {
+                "color": "#d983a6"
+            }
+        },
+        {
+            "selectors": [
+                "#iopj8"
+            ],
+            "style": {
+                "padding": "16px 16px 16px 16px"
+            }
+        },
+        {
+            "selectors": [
+                "#idjmv"
+            ],
+            "style": {
+                "width": "615px",
+                "height": "350px"
+            }
+        },
+        {
+            "selectors": [
+                "#i3kqf"
+            ],
+            "style": {
+                "padding": "16px 16px 16px 16px"
+            }
+        },
+        {
+            "selectors": [
+                "#iawkj"
+            ],
+            "style": {
+                "padding": "0 0 0 1rem"
+            }
+        },
+        {
+            "selectors": [
+                "#iq9df"
+            ],
+            "style": {
+                "padding": "16px 16px 16px 16px"
+            }
+        },
+        {
+            "selectors": [
+                "#ioghb"
+            ],
+            "style": {
+                "padding": "16px 16px 16px 16px"
+            }
+        },
+        {
+            "selectors": [
+                "#i9y0gi"
+            ],
+            "style": {
+                "padding": "16px 16px 16px 16px"
+            }
+        },
+        {
+            "selectors": [
+                "#i420hi"
+            ],
+            "style": {
+                "padding": "16px 16px 16px 16px"
+            }
+        }
+    ],
+    "pages": [
+        {
+            "frames": [
+                {
+                    "component": {
+                        "type": "wrapper",
+                        "stylable": [
+                            "background",
+                            "background-color",
+                            "background-image",
+                            "background-repeat",
+                            "background-attachment",
+                            "background-position",
+                            "background-size"
+                        ],
+                        "attributes": {
+                            "data-gjs-type": "wrapper",
+                            "data-gjs-base-component-type": "global-settings",
+                            "id": "ipp3"
+                        },
+                        "components": [
+                            {
+                                "tagName": "section",
+                                "type": "section",
+                                "classes": [
+                                    "_section",
+                                    "_container"
+                                ],
+                                "attributes": {
+                                    "id": "ijja"
+                                },
+                                "components": [
+                                    {
+                                        "type": "heading",
+                                        "classes": [
+                                            "_heading"
+                                        ],
+                                        "attributes": {
+                                            "id": "i3zg"
+                                        },
+                                        "components": [
+                                            {
+                                                "type": "text",
+                                                "content": "見出しレベル1",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "i199"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "paragraph",
+                                        "classes": [
+                                            "_paragraph"
+                                        ],
+                                        "attributes": {
+                                            "id": "iuhti"
+                                        },
+                                        "components": [
+                                            {
+                                                "type": "text",
+                                                "content": "段落テキスト",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "isy9y"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "ij4i"
+                                        },
+                                        "components": [
+                                            {
+                                                "tagName": "h2",
+                                                "type": "heading",
+                                                "classes": [
+                                                    "_heading"
+                                                ],
+                                                "attributes": {
+                                                    "id": "ifms"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "text",
+                                                        "content": "見出しレベル2",
+                                                        "classes": [
+                                                            "_text"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "i0qs"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tagName": "h3",
+                                                "type": "heading",
+                                                "classes": [
+                                                    "_heading"
+                                                ],
+                                                "attributes": {
+                                                    "id": "irk2k"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "text",
+                                                        "content": "見出しレベル3",
+                                                        "classes": [
+                                                            "_text"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "ifzl"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tagName": "h4",
+                                                "type": "heading",
+                                                "classes": [
+                                                    "_heading"
+                                                ],
+                                                "attributes": {
+                                                    "id": "i2jsd"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "text",
+                                                        "content": "見出しレベル4",
+                                                        "classes": [
+                                                            "_text"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "irx7x"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tagName": "h5",
+                                                "type": "heading",
+                                                "classes": [
+                                                    "_heading"
+                                                ],
+                                                "attributes": {
+                                                    "id": "ib8rc"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "text",
+                                                        "content": "見出しレベル5",
+                                                        "classes": [
+                                                            "_text"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "ig6r8"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tagName": "h6",
+                                                "type": "heading",
+                                                "classes": [
+                                                    "_heading"
+                                                ],
+                                                "attributes": {
+                                                    "id": "id5xb"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "text",
+                                                        "content": "見出しレベル6",
+                                                        "classes": [
+                                                            "_text"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "ipmoh"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "custom-name": "見出し"
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "izhck"
+                                        },
+                                        "components": [
+                                            {
+                                                "type": "text",
+                                                "content": "span タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "ilng6"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "strong",
+                                                "type": "text",
+                                                "content": "strong タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "iyaes"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "em",
+                                                "type": "text",
+                                                "content": "em タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "isaxd"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "b",
+                                                "type": "text",
+                                                "content": "b タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "imzei"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "i",
+                                                "type": "text",
+                                                "content": "i タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "i7kyk"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "small",
+                                                "type": "text",
+                                                "content": "small タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "ieg1m"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "cite",
+                                                "type": "text",
+                                                "content": "site タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "irz58"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "dfn",
+                                                "type": "text",
+                                                "content": "dfn タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "i3y3p"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "mark",
+                                                "type": "text",
+                                                "content": "mark タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "imaum"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "var",
+                                                "type": "text",
+                                                "content": "var タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "i04mf"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "ins",
+                                                "type": "text",
+                                                "content": "ins タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "iqdz9"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "del",
+                                                "type": "text",
+                                                "content": "del タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "iez48"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "u",
+                                                "type": "text",
+                                                "content": "u タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "isqmm"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "s",
+                                                "type": "text",
+                                                "content": "s タグ",
+                                                "classes": [
+                                                    "_text"
+                                                ],
+                                                "attributes": {
+                                                    "id": "ifp3a"
+                                                }
+                                            }
+                                        ],
+                                        "custom-name": "テキスト"
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "itdrh"
+                                        },
+                                        "components": [
+                                            {
+                                                "tagName": "h2",
+                                                "type": "heading",
+                                                "classes": [
+                                                    "_heading"
+                                                ],
+                                                "attributes": {
+                                                    "id": "i1uds"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "text",
+                                                        "content": "画像・img タグ",
+                                                        "classes": [
+                                                            "_text"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "i0rcl"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "image",
+                                                "resizable": {
+                                                    "ratioDefault": 1
+                                                },
+                                                "attributes": {
+                                                    "id": "igmwo",
+                                                    "alt": "代替テキスト",
+                                                    "src": "https://picsum.photos/seed/sleek%20modern%20design/800/600"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "icnz6"
+                                        },
+                                        "components": [
+                                            {
+                                                "tagName": "h2",
+                                                "type": "heading",
+                                                "classes": [
+                                                    "_heading"
+                                                ],
+                                                "attributes": {
+                                                    "id": "it0ty"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "text",
+                                                        "content": "ブロックリンク（画像）",
+                                                        "classes": [
+                                                            "_text"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "ikwjh"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "link-block",
+                                                "style": "",
+                                                "classes": [
+                                                    "_link_block"
+                                                ],
+                                                "attributes": {
+                                                    "id": "is5l5",
+                                                    "href": "https://www.google.com/"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "image",
+                                                        "resizable": {
+                                                            "ratioDefault": 1
+                                                        },
+                                                        "attributes": {
+                                                            "id": "iijqr",
+                                                            "alt": "代替テキスト",
+                                                            "src": "https://picsum.photos/seed/sleek%20modern%20design/800/600"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "i00o5"
+                                        },
+                                        "components": [
+                                            {
+                                                "tagName": "h2",
+                                                "type": "heading",
+                                                "classes": [
+                                                    "_heading"
+                                                ],
+                                                "attributes": {
+                                                    "id": "ikior"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "text",
+                                                        "content": "リンク（テキスト）",
+                                                        "classes": [
+                                                            "_text"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "icxxp"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "link",
+                                                "content": "テキストリンク",
+                                                "attributes": {
+                                                    "id": "ihzv2",
+                                                    "href": "https://google.com"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "iopj8"
+                                        },
+                                        "components": [
+                                            {
+                                                "tagName": "h2",
+                                                "type": "heading",
+                                                "classes": [
+                                                    "_heading"
+                                                ],
+                                                "attributes": {
+                                                    "id": "i461n"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "text",
+                                                        "content": "動画（Youtube）",
+                                                        "classes": [
+                                                            "_text"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "ia0t7"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tagName": "iframe",
+                                                "type": "video",
+                                                "resizable": {
+                                                    "ratioDefault": 1
+                                                },
+                                                "attributes": {
+                                                    "allowfullscreen": "allowfullscreen",
+                                                    "id": "idjmv"
+                                                },
+                                                "src": "https://www.youtube.com/embed/8B5JbsnauLg?",
+                                                "videoId": "8B5JbsnauLg",
+                                                "provider": "yt",
+                                                "sources": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "i3kqf"
+                                        },
+                                        "components": [
+                                            {
+                                                "tagName": "h2",
+                                                "type": "heading",
+                                                "classes": [
+                                                    "_heading"
+                                                ],
+                                                "attributes": {
+                                                    "id": "i0n2i"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "text",
+                                                        "content": "リスト",
+                                                        "classes": [
+                                                            "_text"
+                                                        ],
+                                                        "attributes": {
+                                                            "id": "iefw5"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "listItem",
+                                                "classes": [
+                                                    "_list"
+                                                ],
+                                                "attributes": {
+                                                    "id": "iw2vz"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "tagName": "li",
+                                                        "components": [
+                                                            {
+                                                                "type": "text",
+                                                                "classes": [
+                                                                    "_text"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "textnode",
+                                                                        "content": "リストアイテム1"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "components": [
+                                                            {
+                                                                "type": "text",
+                                                                "classes": [
+                                                                    "_text"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "textnode",
+                                                                        "content": "リストアイテム2"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tagName": "ol",
+                                                "type": "listItem",
+                                                "classes": [
+                                                    "_list"
+                                                ],
+                                                "attributes": {
+                                                    "id": "ifwfu"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "tagName": "li",
+                                                        "components": [
+                                                            {
+                                                                "type": "text",
+                                                                "classes": [
+                                                                    "_text"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "textnode",
+                                                                        "content": "リストアイテム1"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "components": [
+                                                            {
+                                                                "type": "text",
+                                                                "classes": [
+                                                                    "_text"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "textnode",
+                                                                        "content": "リストアイテム2"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tagName": "ol",
+                                                "type": "listItem",
+                                                "classes": [
+                                                    "_list",
+                                                    "_list-none"
+                                                ],
+                                                "attributes": {
+                                                    "id": "i5dxy"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "tagName": "li",
+                                                        "components": [
+                                                            {
+                                                                "type": "text",
+                                                                "classes": [
+                                                                    "_text"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "textnode",
+                                                                        "content": "リストアイテム1"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "components": [
+                                                            {
+                                                                "type": "text",
+                                                                "classes": [
+                                                                    "_text"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "textnode",
+                                                                        "content": "リストアイテム2"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tagName": "ol",
+                                                "type": "listItem",
+                                                "classes": [
+                                                    "_list",
+                                                    "_list-none",
+                                                    "_list-indent",
+                                                    "_space-y"
+                                                ],
+                                                "attributes": {
+                                                    "id": "iawkj"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "tagName": "li",
+                                                        "components": [
+                                                            {
+                                                                "type": "text",
+                                                                "content": "└<!-- notionvc: 251e10fa-a235-48c6-9ec6-0a076807ebd1 -->リストアイテム1文字の折り返し折り返し折り返し折り返し折り返し折り返し折り返し折り返し折り返し",
+                                                                "classes": [
+                                                                    "_text"
+                                                                ],
+                                                                "attributes": {
+                                                                    "id": "iq0dp"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "tagName": "li",
+                                                        "components": [
+                                                            {
+                                                                "type": "text",
+                                                                "content": "└<!-- notionvc: 251e10fa-a235-48c6-9ec6-0a076807ebd1 -->リストアイテム2",
+                                                                "classes": [
+                                                                    "_text"
+                                                                ],
+                                                                "attributes": {
+                                                                    "id": "it5h5"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "io7r9"
+                                        },
+                                        "components": [
+                                            {
+                                                "type": "tabs",
+                                                "classes": [
+                                                    "c-Tabs"
+                                                ],
+                                                "attributes": {
+                                                    "id": "iptmk"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "tab-container",
+                                                        "classes": [
+                                                            "tab-container"
+                                                        ],
+                                                        "attributes": {
+                                                            "role": "tablist"
+                                                        },
+                                                        "components": [
+                                                            {
+                                                                "type": "tab",
+                                                                "classes": [
+                                                                    "tab"
+                                                                ],
+                                                                "attributes": {
+                                                                    "role": "tab",
+                                                                    "id": "iie8l",
+                                                                    "aria-controls": "i4elq"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "classes": [
+                                                                            "tab-title"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "textnode",
+                                                                                "content": "Tab項目"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "tab",
+                                                                "classes": [
+                                                                    "tab"
+                                                                ],
+                                                                "attributes": {
+                                                                    "role": "tab",
+                                                                    "id": "irkqf",
+                                                                    "aria-controls": "i02sj"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "classes": [
+                                                                            "tab-title"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "textnode",
+                                                                                "content": "Tab項目"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "tab",
+                                                                "classes": [
+                                                                    "tab"
+                                                                ],
+                                                                "attributes": {
+                                                                    "role": "tab",
+                                                                    "id": "i0p5w",
+                                                                    "aria-controls": "ixgpm9"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "classes": [
+                                                                            "tab-title"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "textnode",
+                                                                                "content": "Tab項目"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "tab-contents",
+                                                        "classes": [
+                                                            "tab-contents"
+                                                        ],
+                                                        "components": [
+                                                            {
+                                                                "type": "tab-content",
+                                                                "classes": [
+                                                                    "tab-content"
+                                                                ],
+                                                                "attributes": {
+                                                                    "role": "tabpanel",
+                                                                    "tabindex": 0,
+                                                                    "id": "i4elq",
+                                                                    "aria-hidden": true,
+                                                                    "aria-labelledby": "iie8l"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "section",
+                                                                        "classes": [
+                                                                            "_section"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "classes": [
+                                                                                    "_text"
+                                                                                ],
+                                                                                "components": [
+                                                                                    {
+                                                                                        "type": "textnode",
+                                                                                        "content": "Tabコンテンツ"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "tab-content",
+                                                                "classes": [
+                                                                    "tab-content"
+                                                                ],
+                                                                "attributes": {
+                                                                    "role": "tabpanel",
+                                                                    "tabindex": 0,
+                                                                    "id": "i02sj",
+                                                                    "aria-hidden": true,
+                                                                    "aria-labelledby": "irkqf"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "section",
+                                                                        "classes": [
+                                                                            "_section"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "classes": [
+                                                                                    "_text"
+                                                                                ],
+                                                                                "components": [
+                                                                                    {
+                                                                                        "type": "textnode",
+                                                                                        "content": "Tabコンテンツ"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "tab-content",
+                                                                "classes": [
+                                                                    "tab-content"
+                                                                ],
+                                                                "attributes": {
+                                                                    "role": "tabpanel",
+                                                                    "tabindex": 0,
+                                                                    "id": "ixgpm9",
+                                                                    "aria-hidden": true,
+                                                                    "aria-labelledby": "i0p5w"
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "section",
+                                                                        "classes": [
+                                                                            "_section"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "classes": [
+                                                                                    "_text"
+                                                                                ],
+                                                                                "components": [
+                                                                                    {
+                                                                                        "type": "textnode",
+                                                                                        "content": "Tabコンテンツ"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "ioghb"
+                                        },
+                                        "components": [
+                                            {
+                                                "type": "swiper-slider-container",
+                                                "classes": [
+                                                    "swiper",
+                                                    "swiper-container",
+                                                    "_green"
+                                                ],
+                                                "attributes": {
+                                                    "data-apg": "valid",
+                                                    "id": "ihv1pd"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "swiper-slider-wrapper",
+                                                        "classes": [
+                                                            "swiper-wrapper"
+                                                        ],
+                                                        "components": [
+                                                            {
+                                                                "type": "swiper-slider-slide",
+                                                                "classes": [
+                                                                    "swiper-slide"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "image",
+                                                                        "resizable": {
+                                                                            "ratioDefault": 1
+                                                                        },
+                                                                        "attributes": {
+                                                                            "alt": "",
+                                                                            "src": "https://picsum.photos/520/230/?random"
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "swiper-slider-slide",
+                                                                "classes": [
+                                                                    "swiper-slide"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "image",
+                                                                        "resizable": {
+                                                                            "ratioDefault": 1
+                                                                        },
+                                                                        "attributes": {
+                                                                            "alt": "",
+                                                                            "src": "https://picsum.photos/520/231/?random"
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "swiper-slider-slide",
+                                                                "classes": [
+                                                                    "swiper-slide"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "image",
+                                                                        "resizable": {
+                                                                            "ratioDefault": 1
+                                                                        },
+                                                                        "attributes": {
+                                                                            "alt": "",
+                                                                            "src": "https://picsum.photos/520/232/?random"
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "swiper-slider-prev",
+                                                        "classes": [
+                                                            "swiper-button-prev"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "swiper-slider-next",
+                                                        "classes": [
+                                                            "swiper-button-next"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "swiper-slider-pagination",
+                                                        "classes": [
+                                                            "swiper-pagination"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "swiper-slider-scrollbar",
+                                                        "classes": [
+                                                            "swiper-scrollbar"
+                                                        ]
+                                                    }
+                                                ],
+                                                "scriptUpdated": 1
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "iq9df"
+                                        },
+                                        "components": [
+                                            {
+                                                "type": "accordions",
+                                                "classes": [
+                                                    "c-Accordion",
+                                                    "_orange"
+                                                ],
+                                                "attributes": {
+                                                    "id": "ipuami",
+                                                    "data-accordions": 1
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "accordion-details",
+                                                        "classes": [
+                                                            "accordion-details"
+                                                        ],
+                                                        "attributes": {
+                                                            "data-accordion-details": 1
+                                                        },
+                                                        "components": [
+                                                            {
+                                                                "type": "accordion-summary",
+                                                                "classes": [
+                                                                    "accordion-summary"
+                                                                ],
+                                                                "attributes": {
+                                                                    "data-accordion-summary": 1
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "tagName": "button",
+                                                                        "classes": [
+                                                                            "accordion-trigger"
+                                                                        ],
+                                                                        "attributes": {
+                                                                            "id": "i3f8vj",
+                                                                            "type": "button",
+                                                                            "aria-controls": "ih6jiw",
+                                                                            "data-accordion-button": ""
+                                                                        },
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "classes": [
+                                                                                    "accordion-title"
+                                                                                ],
+                                                                                "components": [
+                                                                                    {
+                                                                                        "type": "textnode",
+                                                                                        "content": "項目"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "accordion-content",
+                                                                "classes": [
+                                                                    "accordion-panel"
+                                                                ],
+                                                                "attributes": {
+                                                                    "id": "ih6jiw",
+                                                                    "role": "region",
+                                                                    "aria-labelledby": "i3f8vj",
+                                                                    "data-accordion-content": 1
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "section",
+                                                                        "classes": [
+                                                                            "_section"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "classes": [
+                                                                                    "_text"
+                                                                                ],
+                                                                                "components": [
+                                                                                    {
+                                                                                        "type": "textnode",
+                                                                                        "content": "New Accordion Content"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "accordion-details",
+                                                        "classes": [
+                                                            "accordion-details"
+                                                        ],
+                                                        "attributes": {
+                                                            "data-accordion-details": 1
+                                                        },
+                                                        "components": [
+                                                            {
+                                                                "type": "accordion-summary",
+                                                                "classes": [
+                                                                    "accordion-summary"
+                                                                ],
+                                                                "attributes": {
+                                                                    "data-accordion-summary": 1
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "tagName": "button",
+                                                                        "classes": [
+                                                                            "accordion-trigger"
+                                                                        ],
+                                                                        "attributes": {
+                                                                            "id": "ic84x6",
+                                                                            "type": "button",
+                                                                            "aria-controls": "i556pi",
+                                                                            "data-accordion-button": ""
+                                                                        },
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "classes": [
+                                                                                    "accordion-title"
+                                                                                ],
+                                                                                "components": [
+                                                                                    {
+                                                                                        "type": "textnode",
+                                                                                        "content": "項目"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "accordion-content",
+                                                                "classes": [
+                                                                    "accordion-panel"
+                                                                ],
+                                                                "attributes": {
+                                                                    "id": "i556pi",
+                                                                    "role": "region",
+                                                                    "aria-labelledby": "ic84x6",
+                                                                    "data-accordion-content": 1
+                                                                },
+                                                                "components": [
+                                                                    {
+                                                                        "type": "section",
+                                                                        "classes": [
+                                                                            "_section"
+                                                                        ],
+                                                                        "components": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "classes": [
+                                                                                    "_text"
+                                                                                ],
+                                                                                "components": [
+                                                                                    {
+                                                                                        "type": "textnode",
+                                                                                        "content": "New Accordion Content"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "scriptUpdated": 1
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "i9y0gi"
+                                        },
+                                        "components": [
+                                            {
+                                                "type": "GamplaEntryButton",
+                                                "classes": [
+                                                    "gampla-entry-btn"
+                                                ],
+                                                "attributes": {
+                                                    "data-entity-id": "pdaa7aecd01c314596ccefb7b",
+                                                    "data-entry-state": "open"
+                                                },
+                                                "components": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "classes": [
+                                                            "button",
+                                                            "_cta",
+                                                            "_open",
+                                                            "_red"
+                                                        ],
+                                                        "components": [
+                                                            {
+                                                                "type": "text",
+                                                                "classes": [
+                                                                    "_text"
+                                                                ],
+                                                                "components": [
+                                                                    {
+                                                                        "type": "textnode",
+                                                                        "content": "エントリーはこちら"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "section",
+                                        "classes": [
+                                            "_section"
+                                        ],
+                                        "attributes": {
+                                            "id": "i420hi"
+                                        }
+                                    }
+                                ],
+                                "custom-name": "Section"
+                            },
+                            {
+                                "type": "global-settings-container",
+                                "attributes": {
+                                    "id": "i41l"
+                                },
+                                "scriptUpdated": 1
+                            }
+                        ],
+                        "gs-entryStateSetting-version": 202403,
+                        "gs-webfontsSetting-initFontFamily": [
+                            {
+                                "name": "ゴシック体",
+                                "value": "\"Helvetica Neue\", Arial, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", \"BIZ UDPGothic\", Meiryo, sans-serif"
+                            },
+                            {
+                                "name": "明朝体",
+                                "value": "\"Times New Roman\", \"YuMincho\", \"Hiragino Mincho ProN\", \"Yu Mincho\", \"MS PMincho\", serif"
+                            },
+                            {
+                                "name": "システムフォント",
+                                "value": "-apple-system, BlinkMacSystemFont, \"Helvetica Neue\", Arial, \"Hiragino Kaku Gothic ProN\", \"Noto Sans\", \"Segoe UI\", sans-serif"
+                            }
+                        ],
+                        "gs-webfontsSetting-version": 202403,
+                        "gs-googleAnalyticsGA4-version": 202504,
+                        "gs-googleAnalyticsGTM-version": 202504,
+                        "head": {
+                            "type": "head"
+                        },
+                        "docEl": {
+                            "tagName": "html"
+                        },
+                        "entry-state": "open"
+                    },
+                    "id": "87nmKafTxUTzNfQh"
+                }
+            ],
+            "id": "Jv42uPdXi2vPTqLS"
+        }
+    ]
+}
