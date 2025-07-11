@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimer: 2025年も広がる唯一無二の音楽世界</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #0c0a09; /* stone-950 */
+            color: #d6d3d1; /* stone-300 */
+        }
+        .font-display {
+            font-family: 'Poppins', sans-serif;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #818cf8, #c084fc); /* indigo-400 to purple-400 */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        @keyframes clean-float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        @keyframes clean-pulse {
+            0%, 100% { opacity: 0.1; }
+            50% { opacity: 0.25; }
+        }
+        .animation-clean-float {
+            animation: clean-float 15s ease-in-out infinite;
+        }
+        .animation-clean-pulse {
+            animation: clean-pulse 10s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <main>
+
+        <!-- Background Shapes -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-500/50 rounded-full blur-3xl opacity-20 animation-clean-float -z-10"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/50 rounded-full blur-3xl opacity-20 animation-clean-pulse -z-10"></div>
+
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+            <div class="absolute inset-0 -z-20">
+                <img src="https://images.unsplash.com/photo-1508868331908-755710f131a2?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&fit=crop" 
+                     alt="星空の下で歌うアーティストをイメージさせる幻想的な風景" 
+                     class="w-full h-full object-cover opacity-20">
+            </div>
+            <div class="container mx-auto px-6 py-24">
+                <div class="animate__animated animate__fadeInDown">
+                    <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-gradient">
+                        Aimer
+                    </h1>
+                    <p class="mt-4 font-display text-xl md:text-2xl font-semibold text-stone-200">
+                        唯一無二の歌声、尽きない魅力
+                    </p>
+                </div>
+                <div class="max-w-3xl mx-auto mt-8 animate__animated animate__fadeInUp animate__delay-1s">
+                    <p class="text-base md:text-lg text-stone-300 leading-relaxed">
+                        Aimerの音楽は、なぜこれほど心を掴むのか？ 2025年も止まらない彼女の探求心と、普遍的な魅力がその答えです。唯一無二のハスキーボイスが紡ぐ物語は、ジャンルの垣根を越え、聴く者の魂を震わせ続けます。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2025 Latest Releases Section -->
+        <section id="releases" class="py-16 md:py-24 bg-stone-950/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-stone-100">2025年を彩る<span class="text-gradient">最新リリース</span></h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-stone-400">映画主題歌からアニメOPまで、Aimerの創造性は多岐にわたるタイアップで証明されています。</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Release Card 1 -->
+                    <div class="bg-stone-900 border border-stone-800 rounded-lg shadow-lg transition-all duration-300 hover:shadow-purple-500/20 hover:-translate-y-2 animate__animated animate__fadeInUp" style="--animate-delay: 0.2s;">
+                        <img src="https://picsum.photos/seed/ethereal%20music/800/600" alt="太陽が昇らない世界をイメージした抽象的なアート" class="rounded-t-lg aspect-video object-cover">
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-bold text-stone-100">太陽が昇らない世界</h3>
+                            <p class="mt-2 text-sm text-stone-400">映画『劇場版「鬼滅の刃」無限城編』W主題歌。LiSAとの共演が話題に。</p>
+                            <span class="inline-block mt-4 text-xs font-semibold text-purple-400 bg-purple-900/50 px-2 py-1 rounded-full">2025.07.19 Release</span>
+                        </div>
+                    </div>
+                    <!-- Release Card 2 -->
+                    <div class="bg-stone-900 border border-stone-800 rounded-lg shadow-lg transition-all duration-300 hover:shadow-purple-500/20 hover:-translate-y-2 animate__animated animate__fadeInUp" style="--animate-delay: 0.4s;">
+                        <img src="https://picsum.photos/seed/expansive%20soundscape/800/600" alt="SCOPEをイメージした広大な風景" class="rounded-t-lg aspect-video object-cover">
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-bold text-stone-100">SCOPE</h3>
+                            <p class="mt-2 text-sm text-stone-400">TVアニメ「天久鷹央の推理カルテ」OPテーマ。疾走感あふれる一曲。</p>
+                            <span class="inline-block mt-4 text-xs font-semibold text-indigo-400 bg-indigo-900/50 px-2 py-1 rounded-full">2025.02.19 Release</span>
+                        </div>
+                    </div>
+                    <!-- Release Card 3 -->
+                    <div class="bg-stone-900 border border-stone-800 rounded-lg shadow-lg transition-all duration-300 hover:shadow-purple-500/20 hover:-translate-y-2 animate__animated animate__fadeInUp" style="--animate-delay: 0.6s;">
+                        <img src="https://picsum.photos/seed/emotional%20depth%20music/800/600" alt="Eclipseをイメージした月食の天体写真" class="rounded-t-lg aspect-video object-cover">
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-bold text-stone-100">Eclipse</h3>
+                            <p class="mt-2 text-sm text-stone-400">RPG「アークナイツ」6周年記念テーマソング。壮大な世界観を表現。</p>
+                            <span class="inline-block mt-4 text-xs font-semibold text-sky-400 bg-sky-900/50 px-2 py-1 rounded-full">2025.04.28 Release</span>
+                        </div>
+                    </div>
+                    <!-- Release Card 4 -->
+                    <div class="bg-stone-900 border border-stone-800 rounded-lg shadow-lg transition-all duration-300 hover:shadow-purple-500/20 hover:-translate-y-2 animate__animated animate__fadeInUp" style="--animate-delay: 0.8s;">
+                        <img src="https://picsum.photos/seed/artistic%20inspiration/800/600" alt="やさしい舞踏会をイメージした幻想的なイラスト" class="rounded-t-lg aspect-video object-cover">
+                        <div class="p-6">
+                            <h3 class="font-display text-xl font-bold text-stone-100">やさしい舞踏会</h3>
+                            <p class="mt-2 text-sm text-stone-400">NHK「みんなのうた」書き下ろし。おとぎ話のようなワルツ。</p>
+                            <span class="inline-block mt-4 text-xs font-semibold text-pink-400 bg-pink-900/50 px-2 py-1 rounded-full">2025 Feb-Mar Broadcast</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Items Section 1 -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="mb-12">
+                    <h2 class="font-display text-2xl md:text-3xl font-bold text-stone-100">Aimerのディスコグラフィーを探る</h2>
+                    <p class="mt-2 text-stone-400">時代を彩ってきた名盤の数々。</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="#dummy" class="group block relative rounded-lg overflow-hidden shadow-lg animate__animated animate__fadeIn" style="--animate-delay: 0.2s;">
+                        <img src="https://unsplash.it/800/600?image=1079" alt="アルバム「Walpurgis」のカバーアートイメージ" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="font-display text-2xl font-bold text-white">Walpurgis</h3>
+                            <p class="text-white/80 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">魔女の夜をテーマにしたコンセプチュアルな一枚。</p>
+                        </div>
+                    </a>
+                    <a href="#dummy" class="group block relative rounded-lg overflow-hidden shadow-lg animate__animated animate__fadeIn" style="--animate-delay: 0.4s;">
+                        <img src="https://unsplash.it/800/600?image=994" alt="アルバム「DAWN」のカバーアートイメージ" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="font-display text-2xl font-bold text-white">DAWN</h3>
+                            <p class="text-white/80 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">夜明けをテーマに、希望を描いたサードアルバム。</p>
+                        </div>
+                    </a>
+                    <a href="#dummy" class="group block relative rounded-lg overflow-hidden shadow-lg animate__animated animate__fadeIn" style="--animate-delay: 0.6s;">
+                        <img src="https://unsplash.it/800/600?image=1056" alt="アルバム「daydream」のカバーアートイメージ" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="font-display text-2xl font-bold text-white">daydream</h3>
+                            <p class="text-white/80 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">豪華アーティスト陣との共演が実現した傑作。</p>
+                        </div>
+                    </a>
+                    <a href="#dummy" class="group block relative rounded-lg overflow-hidden shadow-lg animate__animated animate__fadeIn" style="--animate-delay: 0.8s;">
+                        <img src="https://unsplash.it/800/600?image=1039" alt="ベストアルバム「blanc」のカバーアートイメージ" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="font-display text-2xl font-bold text-white">BEST SELECTION "blanc"</h3>
+                            <p class="text-white/80 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">太陽をテーマにしたバラード中心のベスト盤。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Charm Section -->
+        <section id="charm" class="py-16 md:py-24 overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                    <div class="relative animate__animated animate__fadeInLeft">
+                        <img src="https://picsum.photos/seed/night%20sky%20stars/800/600" alt="Aimerの音楽の深遠さを表現する星が輝く夜空" class="rounded-lg shadow-2xl w-full">
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-4 border-purple-500/50 rounded-lg -z-10 transform translate-x-4 translate-y-4"></div>
+                    </div>
+                    <div class="animate__animated animate__fadeInRight">
+                        <h2 class="font-display text-3xl md:text-4xl font-bold text-stone-100">尽きない魅力：<br class="sm:hidden"><span class="text-gradient">唯一無二の歌声の共鳴</span></h2>
+                        <p class="mt-6 text-stone-300 leading-relaxed">
+                            Aimerの歌声は、単なる「美しいハスキーボイス」を超越します。透明感と深みを兼ね備え、喜びや悲しみ、希望といったあらゆる感情を鮮やかに表現。まるで目の前で物語が展開されるかのようです。
+                        </p>
+                        <div class="mt-8 space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-microphone-lines text-purple-400 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg text-stone-100">卓越した表現力</h4>
+                                    <p class="text-stone-400">聴く者はAimerの歌声を通して感情の奥底に触れ、自身を重ねることができます。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-guitar text-indigo-400 text-xl mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg text-stone-100">ジャンルレスな音楽性</h4>
+                                    <p class="text-stone-400">バラードからロックまで、楽曲の深いメッセージと完璧な表現力で国境や世代を超えて愛されます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Muse Section -->
+        <section id="muse" class="py-16 md:py-24 bg-stone-950/50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-stone-100">アーティストを魅了する<span class="text-gradient">「ミューズ」</span></h2>
+                <div class="max-w-3xl mx-auto mt-8">
+                    <blockquote class="border-l-4 border-purple-500 pl-6 italic text-stone-300 text-lg md:text-xl leading-loose animate__animated animate__fadeInUp">
+                        ONE OK ROCKのTaka、RADWIMPSの野田洋次郎、TK (凛として時雨) —。名だたるアーティストたちが彼女の歌声にインスピレーションを受け、楽曲を提供。これはAimerの声が持つ多面的な表情が、コラボレーターを新たな音楽的境地へと導く力を持つことの証明です。
+                    </blockquote>
+                    <p class="mt-6 font-semibold text-purple-300 animate__animated animate__fadeInUp" style="--animate-delay: 0.5s;">
+                        彼女は歌い手であり、創造の源泉でもある。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="relative bg-gradient-to-br from-purple-600/80 to-indigo-600/80 rounded-xl p-8 md:p-16 text-center overflow-hidden">
+                    <div class="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                    <div class="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full translate-x-1/2 translate-y-1/2"></div>
+                    <div class="relative z-10 animate__animated animate__pulse animate__infinite animate__slower">
+                        <h2 class="font-display text-4xl md:text-5xl font-bold text-white">Aimerの世界へ、<br>今すぐダイブ。</h2>
+                        <p class="max-w-2xl mx-auto mt-6 text-lg text-purple-100">
+                            心を癒し、力強く背中を押してくれるAimerの唯一無二の世界観に、あなたもぜひ浸ってみてください。最新作をストリーミングで体験し、その尽きない魅力をその耳で感じてください。
+                        </p>
+                        <div class="mt-10">
+                            <a href="#dummy" class="inline-block bg-white text-purple-700 font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 hover:bg-purple-100 hover:shadow-2xl hover:scale-105 transform">
+                                <i class="fas fa-play-circle mr-2"></i> 最新作をストリーミング
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            if (anchor.getAttribute('href') === '#dummy') return; // Skip dummy links
+            
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.animate__animated').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

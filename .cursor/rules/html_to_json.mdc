@@ -34,6 +34,7 @@ HTMLファイルをGrapes.jsでビジュアル編集可能なプロジェクトJ
    - 外部アセット（画像、フォント）
    - JavaScript機能（除去対象）
    - 主要なレイアウト構造
+   - **html/bodyスタイリングの確認**（ラッパー要素への適用対象）
 
 ### Step 2: アセット情報の抽出
 
@@ -45,8 +46,17 @@ HTMLファイルをGrapes.jsでビジュアル編集可能なプロジェクトJ
 2. **フォントの識別**
    - Google Fonts等の外部フォント
    - Font AwesomeアイコンフォントのCDN
+
+3. **アニメーションライブラリの確認**
+   ```html
+   <!-- Animate.css CDN例 -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   ```
+   - アニメーションクラス名の確認（`animate__animated`, `animate__fadeIn`等）
+   - 使用されているアニメーション名の抽出（`animate__bounceIn`, `animate__slideInUp`等）
+   - バージョン互換性の確認（4.x系推奨）
    
-3. **Font Awesome CDN設定の確認**
+4. **Font Awesome CDN設定の確認**
    ```html
    <!-- Font Awesome 6.x CDN例 -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -99,6 +109,7 @@ HTMLファイルをGrapes.jsでビジュアル編集可能なプロジェクトJ
             "attributes": {
               "data-gjs-type": "wrapper"
             },
+            "classes": ["_wrapper"],
             "components": []
           }
         }
@@ -109,6 +120,29 @@ HTMLファイルをGrapes.jsでビジュアル編集可能なプロジェクトJ
 ```
 
 #### コンポーネント構造例:
+
+**ラッパーコンポーネント（html/bodyスタイリング適用時）:**
+```json
+{
+  "type": "wrapper",
+  "stylable": [
+    "background",
+    "background-color",
+    "background-image",
+    "background-repeat",
+    "background-attachment",
+    "background-position",
+    "background-size"
+  ],
+  "attributes": {
+    "data-gjs-type": "wrapper"
+  },
+  "classes": ["_wrapper"],
+  "components": [
+    // 子要素がここに配置される
+  ]
+}
+```
 
 **基本的なテキストコンポーネント:**
 ```json
@@ -154,6 +188,21 @@ HTMLファイルをGrapes.jsでビジュアル編集可能なプロジェクトJ
 }
 ```
 
+**メインコンテンツコンポーネント:**
+```json
+{
+  "tagName": "section",
+  "type": "section",
+  "classes": [],
+  "attributes": {
+    "id": "main-content"
+  },
+  "components": [
+    // ページの主要コンテンツがここに配置される
+  ]
+}
+```
+
 **Font Awesome アイコン利用例:**
 ```json
 {
@@ -163,6 +212,25 @@ HTMLファイルをGrapes.jsでビジュアル編集可能なプロジェクトJ
   "attributes": {
     "id": "icon-id"
   }
+}
+```
+
+**Animate.css アニメーション利用例:**
+```json
+{
+  "tagName": "div",
+  "type": "section",
+  "classes": ["animate__animated", "animate__fadeInUp", "animate__delay-1s"],
+  "attributes": {
+    "id": "animated-section"
+  },
+  "components": [
+    {
+      "type": "text",
+      "content": "アニメーション付きテキスト",
+      "classes": ["_text", "animate__animated", "animate__bounceIn"]
+    }
+  ]
 }
 ```
 
@@ -198,10 +266,42 @@ HTMLファイルをGrapes.jsでビジュアル編集可能なプロジェクトJ
    }
    ```
 
-4. **Tailwind CSSクラスの統合**
+4. **CSSフレームワーククラスの統合**
    - Tailwind CSSクラスは要素の`classes`配列に保持
+   - Animate.cssクラスは要素の`classes`配列に保持
+   - Font Awesomeクラスは要素の`classes`配列に保持
    - カスタムスタイルのみ`styles`配列に変換
    - レスポンシブプレフィックス（sm:, md:, lg:）の保持
+   - アニメーション制御クラス（`animate__delay-*`, `animate__duration-*`）の保持
+
+5. **html/bodyスタイリングのラッパー要素への適用**
+   - `html`, `body`セレクタのスタイルを検出
+   - ラッパー要素クラス（`._wrapper`）のスタイルとして変換
+   - 具体的な変換例：
+     ```json
+     // 元のHTML/CSS
+     body {
+       margin: 0;
+       padding: 0;
+       font-family: 'Noto Sans JP', sans-serif;
+       background-color: #f8fafc;
+       line-height: 1.6;
+     }
+     
+     // Grapes.js変換後
+     {
+       "selectors": ["._wrapper"],
+       "style": {
+         "margin": "0",
+         "padding": "0",
+         "font-family": "'Noto Sans JP', sans-serif",
+         "background-color": "#f8fafc",
+         "line-height": "1.6"
+       }
+     }
+     ```
+   - `html`要素の`font-size`やその他のルートレベルスタイルも同様に適用
+   - 元の`body`セレクタは削除または最小限のスタイルに変更
 
 ### Step 5: HTMLコンポーネント変換
 
@@ -209,20 +309,29 @@ HTMLファイルをGrapes.jsでビジュアル編集可能なプロジェクトJ
    - HTML要素を対応するGrapes.jsコンポーネントタイプに変換
    - `tagName`, `type`, `classes`, `attributes`の適切な設定
    - ネストした構造の`components`配列での表現
+   - **ラッパー要素の適切な設定**：html/bodyスタイルが存在する場合、ラッパー要素に`_wrapper`クラスを追加
 
 2. **要素タイプ別変換ルール**
    ```
    <h1> → { "tagName": "h1", "type": "heading" }
    <p> → { "type": "paragraph" }
    <section> → { "tagName": "section", "type": "section" }
+   <main> → { "tagName": "section", "type": "section" }
    <img> → { "tagName": "img", "type": "image" }
    <i class="fas fa-*"> → { "tagName": "i", "type": "icon" }
    ```
+   
+   **重要な変換ルール：**
+   - `<main>`要素は常に`section`コンポーネントとして変換する
+   - `id="main-content"`を持つ要素は特にメインコンテンツコンポーネントとして扱う
+   - セマンティックHTMLの`<main>`タグは、Grapes.jsでは`<section>`として表現される
 
 3. **属性とクラスの変換**
    - HTMLクラス名をGrapes.js `classes`配列に変換
    - `id`属性の保持と一意性確保
    - Tailwind CSSクラスの維持
+   - Animate.cssアニメーションクラスの維持
+   - Font Awesomeアイコンクラスの維持
 
 4. **JavaScript機能の除去**
    - `<script>`タグの完全除去
@@ -258,6 +367,11 @@ HTMLファイルをGrapes.jsでビジュアル編集可能なプロジェクトJ
 - **Font Awesome**: CDN経由での利用（ファイル参照不要）
   - Font Awesome 6.x の最新版を推奨
   - アイコンクラス名の保持（`fas`, `far`, `fab`, `fal`）
+  - Tailwind CSSとの組み合わせ対応
+- **Animate.css**: CDN経由での利用（ファイル参照不要）
+  - Animate.css 4.x の最新版を推奨
+  - アニメーションクラス名の保持（`animate__animated`, `animate__fadeIn`等）
+  - タイミング制御クラスの保持（`animate__delay-1s`, `animate__faster`等）
   - Tailwind CSSとの組み合わせ対応
 - **カスタムCSS**: Grapes.jsエディタでの編集性を考慮
 
@@ -299,6 +413,7 @@ HTML分析 → アセット抽出 → CSS変換 → HTML変換 → 統合 → �
 - 視覚的レイアウトの検証
 - レスポンシブ動作の確認
 - Grapes.jsエディタでの編集可能性テスト
+- **ラッパー要素スタイリングの検証**：html/bodyスタイルが正しくラッパー要素に適用されているかの確認
 
 ## トラブルシューティング
 
@@ -320,6 +435,37 @@ python -m json.tool html_to_json/project.json
 - Flexbox/Gridプロパティの確認
 - z-indexの調整
 - ポジション指定の見直し
+
+### html/bodyスタイリング変換問題
+
+- **ラッパー要素へのスタイル適用漏れ**
+  - `html`, `body`セレクタのスタイル検出を再確認
+  - `._wrapper`セレクタでのスタイル定義の確認
+  - 元の`body`セレクタが残っていないかチェック
+  
+- **スタイルの重複や競合**
+  ```json
+  // 推奨：ラッパー要素への統合
+  {
+    "selectors": ["._wrapper"],
+    "style": {
+      "margin": "0",
+      "font-family": "'Noto Sans JP', sans-serif"
+    }
+  }
+  
+  // 避ける：body/htmlセレクタの残存
+  {
+    "selectors": ["body"],
+    "style": {
+      "margin": "0"
+    }
+  }
+  ```
+  
+- **ページ全体の背景スタイルの不具合**
+  - 背景色・背景画像がラッパー要素に正しく適用されているか確認
+  - `min-height: 100vh`などのビューポート全体スタイルの追加検討
 
 ### アセット読み込み問題
 
@@ -348,6 +494,24 @@ python -m json.tool html_to_json/project.json
   - キャッシュクリアの実施
   - 代替CDN（jsDelivr、unpkg等）の検討
 
+### Animate.css 利用時の注意点
+
+- **CDN設定**: HTMLの`<head>`セクションに必ずCDNリンクを含める
+- **アニメーションクラス**: `animate__animated`クラスとアニメーション名クラスの両方が必要
+  ```html
+  <!-- 正しい例 -->
+  <div class="animate__animated animate__fadeIn">アニメーション要素</div>
+  
+  <!-- 間違った例（animate__animatedクラス不足） -->
+  <div class="animate__fadeIn">アニメーション要素</div>
+  ```
+- **バージョン管理**: 安定版（4.1.1等）の使用を推奨
+- **パフォーマンス**: 必要なアニメーションのみ使用
+- **Grapes.jsエディタでの制限**
+  - 静的変換のため、アニメーションは初期状態で表示
+  - CSS-onlyアニメーションのみ対応（JavaScript制御は除去）
+  - infinite アニメーションは固定表示される可能性
+
 ## MCPサーバー連携
 
 本変換プロセスはMCPサーバー環境で実行され、以下の機能を活用します：
@@ -363,6 +527,8 @@ python -m json.tool html_to_json/project.json
 - [Tailwind CSS Reference](mdc:https:/tailwindcss.com/docs)
 - [Font Awesome Icons](mdc:https:/fontawesome.com/icons)
 - [Font Awesome CDN](mdc:https:/cdnjs.com/libraries/font-awesome)
+- [Animate.css Documentation](mdc:https:/animate.style)
+- [Animate.css CDN](mdc:https:/cdnjs.com/libraries/animate.css)
 - [FastMCP Framework](mdc:https:/github.com/FastMCP/fastmcp)
 
 ---

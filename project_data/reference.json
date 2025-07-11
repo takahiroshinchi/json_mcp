@@ -1535,6 +1535,20 @@
                                         "attributes": {
                                             "id": "i420hi"
                                         }
+                                    },
+                                    {
+                                        "type": "custom-code",
+                                        "components": [
+                                            {
+                                                "tagName": "span",
+                                                "components": [
+                                                    {
+                                                        "type": "textnode",
+                                                        "content": "Insert here your custom code"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ],
                                 "custom-name": "Section"

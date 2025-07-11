@@ -1,0 +1,28 @@
+# CC0画像検索MCPサーバー 依存関係
+# 
+# Core MCP Framework
+fastmcp>=0.2.0
+
+# HTTP Client
+httpx>=0.25.0
+
+# Data handling
+pydantic>=2.0.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Optional: Image processing (for future features)
+# Pillow>=10.0.0
+
+# Optional: Caching
+# redis>=5.0.0
+
+# Optional: Database (for metadata storage)
+# sqlalchemy>=2.0.0
+
+# Development dependencies (comment out for production)
+# pytest>=7.0.0
+# pytest-asyncio>=0.21.0
+# black>=23.0.0
+# flake8>=6.0.0 

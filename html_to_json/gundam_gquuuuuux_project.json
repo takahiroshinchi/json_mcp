@@ -1,0 +1,1030 @@
+{
+  "assets": [
+    {
+      "type": "image",
+      "src": "https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://picsum.photos/seed/digital%20shimmering%20light/1200/800",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://picsum.photos/seed/futuristic%20robot/800/600",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://picsum.photos/seed/sleek%20modern%20design/800/600",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://unsplash.it/800/600?image=1073",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://unsplash.it/800/600?image=1062",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://picsum.photos/seed/stylish%20technology/800/600",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    },
+    {
+      "type": "image",
+      "src": "https://picsum.photos/seed/sci-fi%20innovation/800/600",
+      "unitDim": "px",
+      "height": 0,
+      "width": 0
+    }
+  ],
+  "styles": [
+    {
+      "selectors": ["._wrapper"],
+      "style": {
+        "scroll-behavior": "smooth",
+        "background-color": "#0f172a",
+        "color": "#cbd5e1",
+        "font-family": "Inter, 'Noto Sans JP', sans-serif",
+        "line-height": "1.625"
+      }
+    },
+    {
+      "selectors": [".text-gradient"],
+      "style": {
+        "background-image": "linear-gradient(to right, #60a5fa, #a78bfa)",
+        "-webkit-background-clip": "text",
+        "background-clip": "text",
+        "color": "transparent"
+      }
+    },
+    {
+      "selectors": [".section-fade-in"],
+      "style": {
+        "opacity": "0"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "frames": [
+        {
+          "component": {
+            "type": "wrapper",
+            "stylable": [
+              "background",
+              "background-color",
+              "background-image",
+              "background-repeat",
+              "background-attachment",
+              "background-position",
+              "background-size"
+            ],
+            "attributes": {
+              "data-gjs-type": "wrapper"
+            },
+            "classes": ["_wrapper"],
+            "components": [
+              {
+                "tagName": "section",
+                "type": "section",
+                "classes": ["relative", "overflow-hidden"],
+                "attributes": {
+                  "id": "main-content"
+                },
+                "components": [
+                  {
+                    "tagName": "div",
+                    "type": "section",
+                    "classes": ["absolute", "top-0", "-left-1/4", "w-1/2", "h-1/2", "bg-blue-500/20", "rounded-full", "blur-3xl", "animate-clean-float", "opacity-30"],
+                    "attributes": {
+                      "id": "bg-decoration-1"
+                    },
+                    "components": []
+                  },
+                  {
+                    "tagName": "div",
+                    "type": "section",
+                    "classes": ["absolute", "bottom-0", "-right-1/4", "w-1/2", "h-1/2", "bg-violet-500/20", "rounded-full", "blur-3xl", "animate-clean-float", "animation-delay-3000", "opacity-30"],
+                    "attributes": {
+                      "id": "bg-decoration-2"
+                    },
+                    "components": []
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["relative", "min-h-screen", "flex", "items-center", "justify-center", "p-8", "bg-hero-pattern", "bg-cover", "bg-center", "bg-no-repeat"],
+                    "attributes": {
+                      "id": "hero"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "section",
+                        "classes": ["absolute", "inset-0", "bg-slate-900/70", "backdrop-blur-sm"],
+                        "attributes": {
+                          "id": "hero-overlay"
+                        },
+                        "components": []
+                      },
+                      {
+                        "tagName": "div",
+                        "type": "section",
+                        "classes": ["relative", "z-10", "text-center", "max-w-4xl", "mx-auto", "animate-fade-in-up"],
+                        "attributes": {
+                          "id": "hero-content"
+                        },
+                        "components": [
+                          {
+                            "tagName": "h1",
+                            "type": "heading",
+                            "classes": ["font-display", "font-black", "text-5xl", "md:text-7xl", "lg:text-8xl", "tracking-tighter", "mb-4", "text-white"],
+                            "attributes": {
+                              "id": "hero-title"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "content": "ガンダム"
+                              },
+                              {
+                                "tagName": "span",
+                                "type": "text",
+                                "classes": ["text-gradient"],
+                                "attributes": {
+                                  "id": "hero-title-accent"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": " GQuuuuuuX"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "h2",
+                            "type": "heading",
+                            "classes": ["font-jp", "font-bold", "text-lg", "md:text-2xl", "text-slate-200", "mb-8"],
+                            "attributes": {
+                              "id": "hero-subtitle"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "content": "ガンダム最新シリーズ『機動戦士Gundam GQuuuuuuX』が描く、新時代のスタイリッシュな輝き！"
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "p",
+                            "type": "paragraph",
+                            "classes": ["max-w-2xl", "mx-auto", "text-slate-300", "mb-10"],
+                            "attributes": {
+                              "id": "hero-description"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "content": "伝統を受け継ぎつつ、新たな視聴者層にも響く現代的な魅力とスタイリッシュなデザインを兼ね備えた、まさに「最新」のガンダム体験がここに。この新時代の輝きを、その目で確かめてください。"
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "a",
+                            "type": "link",
+                            "classes": ["inline-block", "bg-gradient-to-r", "from-blue-500", "to-violet-500", "text-white", "font-bold", "py-3", "px-8", "rounded-full", "text-lg", "shadow-lg", "hover:shadow-xl", "hover:-translate-y-1", "transition-all", "duration-300"],
+                            "attributes": {
+                              "id": "hero-cta",
+                              "href": "#introduction"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "content": "その進化を目撃する "
+                              },
+                              {
+                                "tagName": "i",
+                                "type": "icon",
+                                "classes": ["fas", "fa-arrow-down", "ml-2"],
+                                "attributes": {
+                                  "id": "hero-cta-icon"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["py-20", "md:py-32", "px-8"],
+                    "attributes": {
+                      "id": "introduction"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "section",
+                        "classes": ["max-w-4xl", "mx-auto", "text-center"],
+                        "attributes": {
+                          "id": "introduction-content"
+                        },
+                        "components": [
+                          {
+                            "tagName": "h2",
+                            "type": "heading",
+                            "classes": ["font-display", "font-bold", "text-3xl", "md:text-4xl", "mb-6", "text-white"],
+                            "attributes": {
+                              "id": "introduction-title"
+                            },
+                            "components": [
+                              {
+                                "tagName": "span",
+                                "type": "text",
+                                "classes": ["text-gradient"],
+                                "attributes": {
+                                  "id": "introduction-title-accent"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "ガンダムの常識"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "text",
+                                "content": "を、塗り替える。"
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "p",
+                            "type": "paragraph",
+                            "classes": ["text-lg", "text-slate-400"],
+                            "attributes": {
+                              "id": "introduction-description"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "content": "2025年7月現在、ガンダムシリーズの最新TVシリーズとして注目を集めているのが、『機動戦士Gundam GQuuuuuuX（ジークアクス）』です。2025年4月9日よりPrime Videoで国内最速配信が開始され、日本テレビ系30局ネットでも放送中。本作は、これまでのガンダムシリーズへのオマージュが散りばめられ往年のファンを掴む一方、初めてガンダムを観る人にも親しみやすいストーリーラインが特徴。その進化は、デザイン、物語、そして映像体験の全てに及んでいます。"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["py-12", "px-8"],
+                    "attributes": {
+                      "id": "related-items"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "section",
+                        "classes": ["max-w-6xl", "mx-auto"],
+                        "attributes": {
+                          "id": "related-items-container"
+                        },
+                        "components": [
+                          {
+                            "tagName": "h3",
+                            "type": "heading",
+                            "classes": ["font-display", "text-2xl", "font-bold", "text-center", "mb-10", "text-white"],
+                            "attributes": {
+                              "id": "related-items-title"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "content": "関連アイテム & 最新ガンプラ"
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "div",
+                            "type": "section",
+                            "classes": ["grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-4", "gap-8"],
+                            "attributes": {
+                              "id": "related-items-grid"
+                            },
+                            "components": [
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800/50", "border", "border-slate-700", "rounded-lg", "shadow-md", "transition-all", "duration-300", "hover:shadow-2xl", "hover:shadow-blue-500/20", "hover:-translate-y-2", "overflow-hidden"],
+                                "attributes": {
+                                  "id": "item-1",
+                                  "href": "#dummy"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:scale-105", "transition-transform", "duration-300"],
+                                    "attributes": {
+                                      "id": "item-1-image",
+                                      "src": "https://picsum.photos/seed/futuristic%20robot/800/600",
+                                      "alt": "スタイリッシュなデザインの最新ガンプラモデル"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "section",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "item-1-content"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-lg", "text-white", "mb-2"],
+                                        "attributes": {
+                                          "id": "item-1-title"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "MG 1/100 GQuuuuuuX"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "tagName": "p",
+                                        "type": "paragraph",
+                                        "classes": ["text-slate-400", "text-sm"],
+                                        "attributes": {
+                                          "id": "item-1-description"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "次世代の可動域とディテールを再現。"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800/50", "border", "border-slate-700", "rounded-lg", "shadow-md", "transition-all", "duration-300", "hover:shadow-2xl", "hover:shadow-blue-500/20", "hover:-translate-y-2", "overflow-hidden"],
+                                "attributes": {
+                                  "id": "item-2",
+                                  "href": "#dummy"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:scale-105", "transition-transform", "duration-300"],
+                                    "attributes": {
+                                      "id": "item-2-image",
+                                      "src": "https://picsum.photos/seed/sleek%20modern%20design/800/600",
+                                      "alt": "敵役のシャープなデザインのモビルスーツ"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "section",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "item-2-content"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-lg", "text-white", "mb-2"],
+                                        "attributes": {
+                                          "id": "item-2-title"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "HG 1/144 Rival Unit \"Void\""
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "tagName": "p",
+                                        "type": "paragraph",
+                                        "classes": ["text-slate-400", "text-sm"],
+                                        "attributes": {
+                                          "id": "item-2-description"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "漆黒の機体、謎に包まれたライバル機。"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800/50", "border", "border-slate-700", "rounded-lg", "shadow-md", "transition-all", "duration-300", "hover:shadow-2xl", "hover:shadow-blue-500/20", "hover:-translate-y-2", "overflow-hidden"],
+                                "attributes": {
+                                  "id": "item-3",
+                                  "href": "#dummy"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:scale-105", "transition-transform", "duration-300"],
+                                    "attributes": {
+                                      "id": "item-3-image",
+                                      "src": "https://unsplash.it/800/600?image=1073",
+                                      "alt": "GQuuuuuuXのロゴが入った公式アパレル"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "section",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "item-3-content"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-lg", "text-white", "mb-2"],
+                                        "attributes": {
+                                          "id": "item-3-title"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "GQuuuuuuX Official T-Shirt"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "tagName": "p",
+                                        "type": "paragraph",
+                                        "classes": ["text-slate-400", "text-sm"],
+                                        "attributes": {
+                                          "id": "item-3-description"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "シリーズの世界観を身にまとう。"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["group", "block", "bg-slate-800/50", "border", "border-slate-700", "rounded-lg", "shadow-md", "transition-all", "duration-300", "hover:shadow-2xl", "hover:shadow-blue-500/20", "hover:-translate-y-2", "overflow-hidden"],
+                                "attributes": {
+                                  "id": "item-4",
+                                  "href": "#dummy"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "img",
+                                    "type": "image",
+                                    "classes": ["w-full", "h-48", "object-cover", "group-hover:scale-105", "transition-transform", "duration-300"],
+                                    "attributes": {
+                                      "id": "item-4-image",
+                                      "src": "https://unsplash.it/800/600?image=1062",
+                                      "alt": "シリーズのサウンドトラックCDのジャケット"
+                                    }
+                                  },
+                                  {
+                                    "tagName": "div",
+                                    "type": "section",
+                                    "classes": ["p-5"],
+                                    "attributes": {
+                                      "id": "item-4-content"
+                                    },
+                                    "components": [
+                                      {
+                                        "tagName": "h4",
+                                        "type": "heading",
+                                        "classes": ["font-bold", "text-lg", "text-white", "mb-2"],
+                                        "attributes": {
+                                          "id": "item-4-title"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "Original Soundtrack Vol.1"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "tagName": "p",
+                                        "type": "paragraph",
+                                        "classes": ["text-slate-400", "text-sm"],
+                                        "attributes": {
+                                          "id": "item-4-description"
+                                        },
+                                        "components": [
+                                          {
+                                            "type": "text",
+                                            "content": "新時代の戦場を彩る珠玉の楽曲集。"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["py-20", "md:py-32", "px-8", "overflow-hidden"],
+                    "attributes": {
+                      "id": "feature-style"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "section",
+                        "classes": ["max-w-6xl", "mx-auto", "grid", "grid-cols-1", "lg:grid-cols-2", "gap-12", "items-center"],
+                        "attributes": {
+                          "id": "feature-style-container"
+                        },
+                        "components": [
+                          {
+                            "tagName": "div",
+                            "type": "section",
+                            "classes": ["relative"],
+                            "attributes": {
+                              "id": "feature-style-image"
+                            },
+                            "components": [
+                              {
+                                "tagName": "img",
+                                "type": "image",
+                                "classes": ["rounded-xl", "shadow-2xl", "shadow-violet-500/10", "w-full"],
+                                "attributes": {
+                                  "id": "feature-style-img",
+                                  "src": "https://picsum.photos/seed/stylish%20technology/800/600",
+                                  "alt": "未来的な都市景観とスタイリッシュな戦闘シーン"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "div",
+                            "type": "section",
+                            "classes": ["lg:pl-8"],
+                            "attributes": {
+                              "id": "feature-style-content"
+                            },
+                            "components": [
+                              {
+                                "tagName": "span",
+                                "type": "text",
+                                "classes": ["font-display", "font-bold", "text-gradient"],
+                                "attributes": {
+                                  "id": "feature-style-label"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "A New Era of Style"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "h3",
+                                "type": "heading",
+                                "classes": ["font-jp", "font-black", "text-3xl", "md:text-4xl", "mt-2", "mb-6", "text-white"],
+                                "attributes": {
+                                  "id": "feature-style-title"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "研ぎ澄まされた、スタイリッシュな世界観"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "p",
+                                "type": "paragraph",
+                                "classes": ["text-slate-400", "mb-4"],
+                                "attributes": {
+                                  "id": "feature-style-desc-1"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "『GQuuuuuuX』は、単に機体のデザインがスタイリッシュなだけではありません。登場人物たちのファッション、都市の景観、そして戦闘シーンの動きの一つ一つに至るまで、洗練された美意識が貫かれています。"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "p",
+                                "type": "paragraph",
+                                "classes": ["text-slate-400"],
+                                "attributes": {
+                                  "id": "feature-style-desc-2"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "これまでのガンダムシリーズの重厚な世界観に、現代的なシャープさと軽やかさが加わり、見る者を瞬時にその新時代の扉へと誘います。かつてのファンには懐かしさを、新たな視聴者には新鮮な驚きを提供する、まさに進化の結晶です。"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["py-20", "md:py-32", "px-8", "overflow-hidden", "bg-slate-900/50"],
+                    "attributes": {
+                      "id": "feature-story"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "section",
+                        "classes": ["max-w-6xl", "mx-auto", "grid", "grid-cols-1", "lg:grid-cols-2", "gap-12", "items-center"],
+                        "attributes": {
+                          "id": "feature-story-container"
+                        },
+                        "components": [
+                          {
+                            "tagName": "div",
+                            "type": "section",
+                            "classes": ["lg:pr-8", "order-2", "lg:order-1"],
+                            "attributes": {
+                              "id": "feature-story-content"
+                            },
+                            "components": [
+                              {
+                                "tagName": "span",
+                                "type": "text",
+                                "classes": ["font-display", "font-bold", "text-gradient"],
+                                "attributes": {
+                                  "id": "feature-story-label"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "A Story for All Generations"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "h3",
+                                "type": "heading",
+                                "classes": ["font-jp", "font-black", "text-3xl", "md:text-4xl", "mt-2", "mb-6", "text-white"],
+                                "attributes": {
+                                  "id": "feature-story-title"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "世代を超えて響く「最新」の物語"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "p",
+                                "type": "paragraph",
+                                "classes": ["text-slate-400", "mb-4"],
+                                "attributes": {
+                                  "id": "feature-story-desc-1"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "なぜ今、これほどまでに『GQuuuuuuX』が熱狂的に支持されるのか？それは、最新の技術とスタイリッシュな表現の中に、ガンダムが長年培ってきた「人間ドラマ」という本質が息づいているからです。"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "p",
+                                "type": "paragraph",
+                                "classes": ["text-slate-400"],
+                                "attributes": {
+                                  "id": "feature-story-desc-2"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "複雑な人間関係、揺れ動く感情、そして未来への希望と葛藤が、スタイリッシュな映像と融合し、観る者の心に深く訴えかけます。初めてガンダムに触れる人も、長年のファンも、それぞれの視点から深く感情移入できる普遍的な魅力がここにあります。"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "div",
+                            "type": "section",
+                            "classes": ["relative", "order-1", "lg:order-2"],
+                            "attributes": {
+                              "id": "feature-story-image"
+                            },
+                            "components": [
+                              {
+                                "tagName": "img",
+                                "type": "image",
+                                "classes": ["rounded-xl", "shadow-2xl", "shadow-blue-500/10", "w-full"],
+                                "attributes": {
+                                  "id": "feature-story-img",
+                                  "src": "https://picsum.photos/seed/sci-fi%20innovation/800/600",
+                                  "alt": "キャラクターたちが葛藤し成長するドラマティックなシーン"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["relative", "py-20", "md:py-32", "px-8", "bg-tech-pattern", "bg-cover", "bg-center"],
+                    "attributes": {
+                      "id": "feature-tech"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "section",
+                        "classes": ["absolute", "inset-0", "bg-slate-900/80"],
+                        "attributes": {
+                          "id": "feature-tech-overlay"
+                        },
+                        "components": []
+                      },
+                      {
+                        "tagName": "div",
+                        "type": "section",
+                        "classes": ["relative", "z-10", "max-w-4xl", "mx-auto", "text-center"],
+                        "attributes": {
+                          "id": "feature-tech-content"
+                        },
+                        "components": [
+                          {
+                            "tagName": "div",
+                            "type": "section",
+                            "classes": ["bg-white/10", "backdrop-blur-lg", "border", "border-white/20", "rounded-2xl", "p-8", "md:p-12", "shadow-2xl"],
+                            "attributes": {
+                              "id": "feature-tech-card"
+                            },
+                            "components": [
+                              {
+                                "tagName": "span",
+                                "type": "text",
+                                "classes": ["font-display", "font-bold", "text-gradient"],
+                                "attributes": {
+                                  "id": "feature-tech-label"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "Technological Marvel"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "h3",
+                                "type": "heading",
+                                "classes": ["font-jp", "font-black", "text-3xl", "md:text-4xl", "mt-2", "mb-6", "text-white"],
+                                "attributes": {
+                                  "id": "feature-tech-title"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "映像表現の、新たな地平へ"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "p",
+                                "type": "paragraph",
+                                "classes": ["text-slate-300", "mb-6"],
+                                "attributes": {
+                                  "id": "feature-tech-description"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "『GQuuuuuuX』の魅力を支えるのは、最先端の映像技術です。さらに、Netflixシリーズとして制作中の『機動戦士ガンダム 復讐のレクイエム』では、Unreal Engine 5を駆使したフォトリアルな映像表現に挑戦。ガンダムの進化は、ストーリーだけでなく、それを描くテクノロジーと共に加速し続けています。"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "div",
+                                "type": "section",
+                                "classes": ["inline-flex", "items-center", "justify-center", "bg-slate-800", "px-4", "py-2", "rounded-full"],
+                                "attributes": {
+                                  "id": "feature-tech-badge"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "span",
+                                    "type": "text",
+                                    "classes": ["text-white", "font-bold"],
+                                    "attributes": {
+                                      "id": "feature-tech-badge-text"
+                                    },
+                                    "components": [
+                                      {
+                                        "type": "text",
+                                        "content": "Powered by Unreal Engine 5"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "tagName": "section",
+                    "type": "section",
+                    "classes": ["py-20", "md:py-32", "px-8"],
+                    "attributes": {
+                      "id": "final-cta"
+                    },
+                    "components": [
+                      {
+                        "tagName": "div",
+                        "type": "section",
+                        "classes": ["max-w-3xl", "mx-auto", "text-center"],
+                        "attributes": {
+                          "id": "final-cta-content"
+                        },
+                        "components": [
+                          {
+                            "tagName": "h2",
+                            "type": "heading",
+                            "classes": ["font-display", "font-bold", "text-4xl", "md:text-5xl", "mb-6", "text-white"],
+                            "attributes": {
+                              "id": "final-cta-title"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "content": "今すぐ、"
+                              },
+                              {
+                                "tagName": "span",
+                                "type": "text",
+                                "classes": ["text-gradient"],
+                                "attributes": {
+                                  "id": "final-cta-title-accent"
+                                },
+                                "components": [
+                                  {
+                                    "type": "text",
+                                    "content": "新時代の輝き"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "text",
+                                "content": "を体感しよう"
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "p",
+                            "type": "paragraph",
+                            "classes": ["text-slate-400", "text-lg", "mb-10"],
+                            "attributes": {
+                              "id": "final-cta-description"
+                            },
+                            "components": [
+                              {
+                                "type": "text",
+                                "content": "テレビの前で、あるいは手元のデバイスで、最新のガンダムが放つ光を浴びる準備はできていますか？『機動戦士Gundam GQuuuuuuX』は、あなたのガンダム観を根底から覆す、まさに必見のシリーズです。この新時代の幕開けを、ぜひリアルタイムで体験してください。"
+                              }
+                            ]
+                          },
+                          {
+                            "tagName": "div",
+                            "type": "section",
+                            "classes": ["flex", "flex-col", "sm:flex-row", "gap-4", "justify-center"],
+                            "attributes": {
+                              "id": "final-cta-buttons"
+                            },
+                            "components": [
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["bg-blue-600", "text-white", "font-bold", "py-3", "px-8", "rounded-full", "text-lg", "shadow-lg", "hover:bg-blue-500", "hover:-translate-y-1", "transition-all", "duration-300", "flex", "items-center", "justify-center"],
+                                "attributes": {
+                                  "id": "prime-video-btn",
+                                  "href": "#dummy"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "i",
+                                    "type": "icon",
+                                    "classes": ["fab", "fa-amazon", "mr-3"],
+                                    "attributes": {
+                                      "id": "prime-video-icon"
+                                    }
+                                  },
+                                  {
+                                    "type": "text",
+                                    "content": " Prime Videoで観る"
+                                  }
+                                ]
+                              },
+                              {
+                                "tagName": "a",
+                                "type": "link",
+                                "classes": ["bg-slate-700", "text-white", "font-bold", "py-3", "px-8", "rounded-full", "text-lg", "shadow-lg", "hover:bg-slate-600", "hover:-translate-y-1", "transition-all", "duration-300", "flex", "items-center", "justify-center"],
+                                "attributes": {
+                                  "id": "official-site-btn",
+                                  "href": "#dummy"
+                                },
+                                "components": [
+                                  {
+                                    "tagName": "i",
+                                    "type": "icon",
+                                    "classes": ["fas", "fa-tv", "mr-3"],
+                                    "attributes": {
+                                      "id": "official-site-icon"
+                                    }
+                                  },
+                                  {
+                                    "type": "text",
+                                    "content": " 公式サイトへ"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+} 
