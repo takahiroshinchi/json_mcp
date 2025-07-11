@@ -1,4 +1,4 @@
-# server.py
+# grapes_component_server.py
 import asyncio
 import sys
 import json
