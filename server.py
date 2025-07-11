@@ -11,9 +11,9 @@ mcp = FastMCP("grapes-component-server", debug=True)
 
 # Load the Grapes.js project data
 def load_grapes_data() -> Dict[str, Any]:
-    """Load design_3.json file"""
+    """Load reference.json file from project_data directory"""
     current_dir = os.path.dirname(__file__)
-    json_path = os.path.join(current_dir, "design_3.json")
+    json_path = os.path.join(current_dir, "project_data", "reference.json")
     
     try:
         with open(json_path, 'r', encoding='utf-8') as f:
